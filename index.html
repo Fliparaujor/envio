@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Enviar arquivos</title>
+<style>
+  :root { --fundo: #f4f3ef; --texto: #1d1d1b; --suave: #6b6a65; --acento: #1f6f5c; }
+  @media (prefers-color-scheme: dark) { :root { --fundo: #141513; --texto: #ecebe6; --suave: #9c9b95; --acento: #4fb39a; } }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box;
+         background: var(--fundo); color: var(--texto); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 420px; text-align: center; }
+  h1 { font-size: 24px; margin: 0 0 8px; }
+  p { color: var(--suave); margin: 0 0 20px; }
+  button { font: inherit; font-weight: 600; border: 0; border-radius: 10px; padding: 12px 20px;
+           background: var(--acento); color: #fff; cursor: pointer; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="titulo">Conectando...</h1>
+  <p id="texto">Procurando o computador de destino.</p>
+  <button id="denovo" hidden>Tentar de novo</button>
+</main>
+<script>
+// O link do túnel muda quando o servidor reinicia; o servidor grava o atual em link.txt deste repositório.
+const FONTE = "https://api.github.com/repos/Fliparaujor/envio/contents/link.txt?ref=main";
+
+async function ir() {
+  document.getElementById("denovo").hidden = true;
+  document.getElementById("titulo").textContent = "Conectando...";
+  document.getElementById("texto").textContent = "Procurando o computador de destino.";
+  try {
+    const r = await fetch(FONTE + "&t=" + Date.now(), { headers: { Accept: "application/vnd.github.raw" }, cache: "no-store" });
+    const link = (await r.text()).trim();
+    if (!/^https:\/\/[a-z0-9.-]+$/.test(link)) throw new Error("sem link");
+    const vivo = await fetch(link + "/vivo", { cache: "no-store" }).then(x => x.ok).catch(() => false);
+    if (!vivo) throw new Error("desligado");
+    location.replace(link + "/");
+  } catch (e) {
+    document.getElementById("titulo").textContent = "O computador de destino está desligado agora";
+    document.getElementById("texto").textContent = "Tente de novo daqui a pouco. Se continuar assim, avise o Felipe.";
+    document.getElementById("denovo").hidden = false;
+  }
+}
+document.getElementById("denovo").addEventListener("click", ir);
+ir();
+</script>
+</body>
+</html>
