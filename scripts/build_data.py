@@ -32,6 +32,9 @@ OVERRIDE = {
     "cr-agosto": {"title": "Multimarcas — Agosto"},
 }
 
+# frames revisados manualmente que não são peças finais
+EXCLUDE = {("forno", "74:12")}
+
 def fid(n): return n.replace(":", "-")
 
 projects = {}
@@ -74,6 +77,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
                 from PIL import Image
                 with Image.open(th) as im: it["tw"], it["thh"] = im.size
             except Exception: pass
+        if (m["slug"], s["nodeId"]) in EXCLUDE: continue
         if "th" in it:
             from PIL import Image, ImageStat
             with Image.open(th) as im:
