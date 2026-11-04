@@ -42,7 +42,9 @@
     const c = pal(p);
     return `<div class="ph ${cls}" style="--p1:${c[0]};--p2:${c[1] || c[0]};--pi:${ink(c[0])}"><small>${esc(it.format || "frame")} · ${it.w}×${it.h}</small><b>${esc(it.name || p.title)}</b><small>${esc(p.title)}</small></div>`;
   };
-  const cover = (p) => p.items.find((i) => i.hero && i.th) || p.items.find((i) => i.th) || p.items.find((i) => i.hero) || p.items[0];
+  const ar = (i) => i.h / i.w;
+  const isPost = (i) => ar(i) >= 0.75 && ar(i) <= 1.9 && !/brand|logo|signage/i.test(i.format || "");
+  const cover = (p) => p.items.find((i) => i.hero && i.th && isPost(i)) || p.items.find((i) => i.th && isPost(i)) || p.items.find((i) => i.hero && i.th) || p.items.find((i) => i.th) || p.items[0];
 
   /* ---------- textos do config ---------- */
   $$("[data-first]").forEach((e) => (e.textContent = S.first || "FELIPE"));
@@ -262,6 +264,13 @@
   /* ---------- DESTAQUES (sticky stack) ---------- */
   const featured = [...projects].filter((p) => p.featured).concat(projects.filter((p) => !p.featured)).slice(0, 6);
   const stack = $("[data-stack]");
+  // peças inteiras (sem corte) para a esteira do card: posts, stories e quadrados primeiro
+  const reel = (p) => {
+    if (p._reel) return p._reel;
+    const ok = p.items.filter((it) => (it.src || it.th) && it.h / it.w >= 0.75 && it.h / it.w <= 1.9);
+    const rest = p.items.filter((it) => (it.src || it.th) && !ok.includes(it) && it.h / it.w >= 0.5 && it.h / it.w <= 2.2);
+    return (p._reel = ok.concat(rest).slice(0, 10));
+  };
   stack.innerHTML = featured.map((p, i) => {
     const c = pal(p); const bg = c[0]; const tx = ink(bg);
     const imgs = p.items.filter((x) => x.hero).concat(p.items.filter((x) => !x.hero)).slice(0, 3);
@@ -274,15 +283,14 @@
         <div class="scard__tags">${(p.tags || []).slice(0, 4).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>
         <span class="scard__cta">${T("view_project")} <span aria-hidden="true">→</span></span>
       </div>
-      <div class="scard__media">${imgs.map((it) => `<div class="m">${media({ ...it, p })}</div>`).join("")}</div>
+      <div class="scard__media"><div class="reel" style="--dur:${Math.max(28, reel(p).length * 6)}s"><div class="reel__track">${[0, 1].map((k) => reel(p).map((it) => `<figure class="post" style="aspect-ratio:${it.w}/${it.h}"${k ? ' aria-hidden="true"' : ""}><img src="${it.src || it.th}" alt="${k ? "" : esc(p.title + " — " + it.name)}" width="${it.w}" height="${it.h}" loading="lazy" decoding="async"></figure>`).join("")).join("")}</div></div></div>
     </article>`;
   }).join("");
   const setupStack = () => {
     const cards = $$(".scard", stack);
     cards.forEach((card, i) => {
-      $$(".m img", card).forEach((img) => gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: "none", scrollTrigger: { trigger: card, start: "top bottom", end: "bottom top", scrub: true } }));
       const next = cards[i + 1]; if (!next || reduce) return;
-      gsap.to(card, { scale: 0.88, filter: "brightness(.45)", rotateX: 4, ease: "none", scrollTrigger: { trigger: next, start: "top bottom", end: "top 12%", scrub: true } });
+      gsap.to(card, { scale: 0.88, filter: "brightness(.45)", rotateX: 4, ease: "none", scrollTrigger: { trigger: next, start: "top 75%", end: "top 12%", scrub: true } });
     });
   };
 
@@ -324,7 +332,8 @@
     const row = e.target.closest(".row"); if (!row || !fine) return;
     if (pv.cur === row.dataset.slug) return; pv.cur = row.dataset.slug;
     const p = bySlug[pv.cur]; const it = cover(p);
-    const el = document.createElement("div"); el.style.cssText = "position:absolute;inset:0"; el.innerHTML = media({ ...it, p }, { lazy: false });
+    const el = document.createElement("div"); el.style.cssText = "position:absolute;inset:0"; el.innerHTML = media({ ...it, p }, { lazy: false, full: true });
+    prev.style.aspectRatio = `${it.w} / ${it.h}`;
     prevIn.appendChild(el);
     gsap.fromTo(el, { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.6, ease: "expo.out", onComplete: () => { while (prevIn.children.length > 2) prevIn.firstChild.remove(); } });
     gsap.to(prev, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" });
@@ -421,16 +430,26 @@
   };
   const svcCats = Object.keys(cats);
   $("[data-services]").innerHTML = svcCats.map((c, i) => {
-    const imgs = allItems.filter((it) => it.p.category === c && it.th).slice(0, 3);
-    return `<div class="svc ${i === 0 ? "is-open" : ""}" tabindex="0">
-      <div class="svc__n">${String(i + 1).padStart(2, "0")} · ${cats[c]} ${cats[c] > 1 ? T("projects") : T("project")}</div>
-      <div class="svc__imgs">${imgs.map((it) => `<span>${media(it)}</span>`).join("")}</div>
-      <div><h3 class="svc__t">${esc(I.cat(c))}</h3><p class="svc__body">${esc((T("svc") || {})[c] || svcText[c] || "")}</p></div>
+    const its = allItems.filter((it) => it.p.category === c && (it.src || it.th) && isPost(it));
+    const pick = []; const seen = {};
+    its.forEach((it) => { if (pick.length < 12 && (seen[it.p.slug] || 0) < 3) { pick.push(it); seen[it.p.slug] = (seen[it.p.slug] || 0) + 1; } });
+    const names = [...new Set(its.map((it) => it.p.title))].join(" · ");
+    return `<div class="svc ${i === 0 ? "is-open" : ""}">
+      <button class="svc__head" aria-expanded="${i === 0}">
+        <span class="svc__n mono">${String(i + 1).padStart(2, "0")}</span>
+        <span class="svc__t">${esc(I.cat(c))}</span>
+        <span class="svc__c mono">${cats[c]} ${cats[c] > 1 ? T("projects") : T("project")}</span>
+        <span class="svc__plus" aria-hidden="true"></span>
+      </button>
+      <div class="svc__panel"><div class="svc__inner">
+        <div class="svc__txt"><p>${esc((T("svc") || {})[c] || svcText[c] || "")}</p><p class="mono svc__names">${esc(names)}</p></div>
+        <div class="svc__strip">${pick.map((it) => `<figure class="post" data-open="${it.p.slug}" data-cursor="${T("c_open")}" style="aspect-ratio:${it.w}/${it.h}"><img src="${it.th || it.src}" alt="${esc(it.p.title)}" width="${it.w}" height="${it.h}" loading="lazy" decoding="async"></figure>`).join("")}</div>
+      </div></div>
     </div>`;
   }).join("");
   const svcs = $$(".svc");
-  const openSvc = (s) => svcs.forEach((x) => x.classList.toggle("is-open", x === s));
-  svcs.forEach((s) => { s.addEventListener(fine ? "pointerenter" : "click", () => openSvc(s)); s.addEventListener("focus", () => openSvc(s)); });
+  const openSvc = (s) => { svcs.forEach((x) => { const on = x === s; x.classList.toggle("is-open", on); $(".svc__head", x).setAttribute("aria-expanded", on); }); setTimeout(() => ScrollTrigger.refresh(), 700); };
+  svcs.forEach((s) => { $(".svc__head", s).addEventListener("click", () => openSvc(s)); if (fine) s.addEventListener("pointerenter", () => openSvc(s)); });
 
   /* ---------- socials + email ---------- */
   const socials = [["Instagram", S.instagram], ["WhatsApp", S.whatsapp], ["Behance", S.behance]].filter((x) => x[1]);
@@ -461,23 +480,37 @@
   const renderCase = (p) => {
     const idx = projects.indexOf(p); const next = projects[(idx + 1) % projects.length];
     const c = pal(p);
-    const hero = cover(p);
-    const rest = p.items.filter((x) => x !== hero);
+    const wide = p.items.filter((it) => ar(it) < 0.55);
+    const tall = p.items.filter((it) => ar(it) > 2.2);
+    const posts = p.items.filter((it) => !wide.includes(it) && !tall.includes(it));
+    const order = [...posts, ...wide, ...tall];
+    const lbArr = order.map((it) => ({ ...it, p }));
+    const L = (it) => order.indexOf(it);
+    const img = (it, lazy = true) => `<img src="${it.src || it.th}" alt="${esc(p.title + " — " + it.name)}" width="${it.w}" height="${it.h}" ${lazy ? 'loading="lazy"' : ""} decoding="async">`;
+    const cap = (it) => `<figcaption>${esc(it.name)}${it.page ? " · " + esc(it.page) : ""}</figcaption>`;
+    const strip = reel(p);
     caseContent.innerHTML = `
       <div class="case__eyebrow mono"><span>${String(idx + 1).padStart(2, "0")} / ${projects.length}</span><span>${esc(I.cat(p.category))}</span><span>${esc(p.subtitle && p.subtitle !== p.title ? p.subtitle : p.client || "")}</span></div>
       <h2 class="case__title">${esc(p.title)}</h2>
+      ${strip.length > 2 ? `<div class="case__reel"><div class="reel" style="--dur:${Math.max(30, strip.length * 6)}s"><div class="reel__track">${[0, 1].map((k) => strip.map((it) => `<figure class="post" data-lb="${L(it)}" data-cursor="${T("c_zoom")}" style="aspect-ratio:${it.w}/${it.h}"${k ? ' aria-hidden="true"' : ""}>${img(it, false)}</figure>`).join("")).join("")}</div></div></div>` : ""}
       <div class="case__grid">
         <p class="case__sum">${esc(p.summary)}</p>
         <div><h4>${T("deliverables")}</h4><div class="scard__tags">${(p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
         <div><h4>${T("palette")}</h4><div class="palette">${c.map((h) => `<span style="background:${h}" data-hex="${h}"></span>`).join("")}</div>
           <h4 style="margin-top:20px">${T("archive_word")}</h4><p class="mono">${p.pages.length} ${T("pages")} · ${p.items.length} ${T("pieces")}</p></div>
       </div>
-      <div class="case__hero reveal-img" data-lb="0">${media({ ...hero, p }, { full: true, lazy: false })}</div>
+      ${posts.length ? `<div class="gallery">${posts.map((it) => `<figure class="reveal-img" data-lb="${L(it)}" data-cursor="${T("c_zoom")}">${img(it)}${cap(it)}</figure>`).join("")}</div>` : ""}
+      ${wide.length ? `<div class="wide">${wide.map((it) => `<figure class="reveal-img" data-lb="${L(it)}" data-cursor="${T("c_zoom")}">${img(it)}${cap(it)}</figure>`).join("")}</div>` : ""}
+      ${tall.length ? `<div class="pages">${tall.map((it) => `<figure class="browser reveal-img" data-lb="${L(it)}" data-cursor="${T("c_zoom")}"><div class="browser__bar"><i></i><i></i><i></i><span class="mono">${esc(it.name)}</span></div><div class="browser__view">${img(it)}</div></figure>`).join("")}</div>` : ""}
       <div class="case__pages">${p.pages.map((pg) => `<span class="chip">${esc(pg)}</span>`).join("")}</div>
-      <div class="gallery">${rest.map((it, i) => `<figure class="reveal-img" data-lb="${i + 1}" data-cursor="${T("c_zoom")}" style="--ar:${it.w}/${clamp(it.h, 1, it.w * 2.4)}">${media({ ...it, p }, { full: true })}<figcaption>${esc(it.name)} · ${esc(it.page || "")}</figcaption></figure>`).join("")}</div>
       <a class="case__next" href="#/p/${next.slug}" data-cursor="${T("c_next")}"><span class="mono">${T("next_project")}</span><b>${esc(next.title)}</b></a>`;
-    const lbArr = [hero, ...rest].map((it) => ({ ...it, p }));
     $$("[data-lb]", caseContent).forEach((f) => f.addEventListener("click", () => openLightbox(lbArr, +f.dataset.lb)));
+    // páginas longas: rolam sozinhas ao passar o mouse
+    $$(".browser__view", caseContent).forEach((v) => {
+      const im = $("img", v);
+      const go = () => { const d = im.getBoundingClientRect().height - v.clientHeight; if (d > 0) { im.style.transitionDuration = Math.min(14, d / 300) + "s"; im.style.transform = `translateY(${-d}px)`; } };
+      v.addEventListener("pointerenter", go); v.addEventListener("pointerleave", () => { im.style.transitionDuration = "1.2s"; im.style.transform = "none"; });
+    });
     bindCursor(caseContent); bindMagnetic(caseContent);
     caseIO?.disconnect();
     caseIO = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); caseIO.unobserve(e.target); } }), { root: caseScroll, rootMargin: "0px 0px -8% 0px" });
