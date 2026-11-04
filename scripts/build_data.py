@@ -33,7 +33,7 @@ OVERRIDE = {
 }
 
 # frames revisados manualmente que não são peças finais
-EXCLUDE = {("forno", "74:12")}
+EXCLUDE = {("forno", "74:12"), ("monteplan", "200:635")}
 
 def fid(n): return n.replace(":", "-")
 
