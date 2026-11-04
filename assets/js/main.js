@@ -54,16 +54,6 @@
   $(".hero__title").setAttribute("aria-label", `${S.first} ${S.last}`);
   document.title = `${S.name} — ${S.role}`;
 
-  const st = D.stats || {};
-  const statsList = [
-    [st.files || projects.length, "arquivos Figma"],
-    [st.pages || 0, "páginas varridas"],
-    [st.pieces || allItems.length, "peças no arquivo"],
-    [st.categories || new Set(projects.map((p) => p.category)).size, "disciplinas"],
-  ];
-  $("[data-stats]").innerHTML = statsList.map(([n, l]) => `<div class="stat"><b data-count="${n}">0</b><span>${l}</span></div>`).join("");
-  $("[data-hero-stats]").innerHTML = statsList.slice(0, 3).map(([n, l]) => `<div><b>${n}</b>${l}</div>`).join("");
-
   /* ---------- relógio ---------- */
   const clock = $("[data-clock]");
   const tick = () => { try { clock.textContent = new Intl.DateTimeFormat("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: S.timezone }).format(new Date()); } catch { clock.textContent = new Date().toTimeString().slice(0, 5); } };
@@ -348,7 +338,6 @@
     while (added) { added = false; q.forEach((arr) => { if (arr.length) { out.push(arr.shift()); added = true; } }); }
     return out;
   })();
-  $("[data-archive-count]").textContent = `${archItems.length} peças · ${projects.length} projetos`;
   const A = { tiles: [], W: 0, cols: [], ox: 0, oy: 0, vx: 0, vy: 0, drag: false, visible: false, built: false };
   const buildArchive = () => {
     canvas.innerHTML = ""; A.tiles = []; A.cols = [];
