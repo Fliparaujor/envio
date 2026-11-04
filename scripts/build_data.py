@@ -35,6 +35,7 @@ OVERRIDE = {
 def fid(n): return n.replace(":", "-")
 
 projects = {}
+blanks = []
 total_pages = 0
 files = set()
 for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
@@ -73,6 +74,11 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
                 from PIL import Image
                 with Image.open(th) as im: it["tw"], it["thh"] = im.size
             except Exception: pass
+        if "th" in it:
+            from PIL import Image, ImageStat
+            with Image.open(th) as im:
+                if max(ImageStat.Stat(im.convert("L")).stddev) < 4:  # imagem lisa = frame vazio
+                    blanks.append(f'{m["slug"]} {s["nodeId"]}'); continue
         p["items"].append(it)
 
 def rank(p):
@@ -85,4 +91,5 @@ for p in out:
 data = {"projects": out, "stats": {"files": len(files), "pages": total_pages, "pieces": sum(len(p["items"]) for p in out), "categories": len({p["category"] for p in out})}}
 js = "/* gerado por scripts/build_data.py — não edite à mão */\nwindow.PORTFOLIO = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
 open(os.path.join(ROOT, "assets", "js", "data.js"), "w", encoding="utf-8").write(js)
+print("descartadas (vazias):", blanks)
 print(f"{len(out)} projetos, {data['stats']['pieces']} peças, {total_pages} páginas, {len(files)} arquivos; com imagem: {sum(1 for p in out for i in p['items'] if 'th' in i)}")
