@@ -24,7 +24,7 @@
 <!-- preloader -->
 <div class="loader" aria-hidden="true">
   <div class="loader__grid">
-    <div class="loader__name"><span data-first></span><em>portfólio</em></div>
+    <div class="loader__name"><span data-first></span><em data-i18n="loader">portfólio</em></div>
     <div class="loader__count"><span class="loader__num">000</span></div>
     <div class="loader__bar"><i></i></div>
     <div class="loader__strip"></div>
@@ -33,15 +33,16 @@
 </div>
 
 <header class="nav">
-  <a href="#top" class="nav__logo magnetic" data-cursor="topo" aria-label="Início"><span class="nav__mark"></span><span data-initials></span></a>
+  <a href="#top" class="nav__logo magnetic" data-cursor="topo" data-i18n-cursor="c_top" aria-label="Início"><span class="nav__mark"></span><span data-initials></span></a>
   <nav class="nav__links" aria-label="Principal">
-    <a href="#destaques" class="roll"><span data-text="Destaques">Destaques</span></a>
-    <a href="#trabalhos" class="roll"><span data-text="Trabalhos">Trabalhos</span></a>
-    <a href="#arquivo" class="roll"><span data-text="Arquivo">Arquivo</span></a>
-    <a href="#sobre" class="roll"><span data-text="Sobre">Sobre</span></a>
+    <a href="#destaques" class="roll"><span data-text="Destaques" data-i18n="nav_featured">Destaques</span></a>
+    <a href="#trabalhos" class="roll"><span data-text="Trabalhos" data-i18n="nav_work">Trabalhos</span></a>
+    <a href="#arquivo" class="roll"><span data-text="Arquivo" data-i18n="nav_archive">Arquivo</span></a>
+    <a href="#sobre" class="roll"><span data-text="Sobre" data-i18n="nav_about">Sobre</span></a>
   </nav>
   <div class="nav__clock mono"><span class="pulse"></span><span data-city></span> <span data-clock>--:--</span></div>
-  <a href="#contato" class="btn btn--pill magnetic" data-cursor="oi!"><span class="btn__in"><span data-text="Vamos conversar">Vamos conversar</span></span></a>
+  <div class="lang" data-lang><button class="lang__btn mono" aria-haspopup="listbox" aria-expanded="false" data-cursor="lang"><span class="lang__cur">PT</span><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="lang__menu" role="listbox"></ul></div>
+  <a href="#contato" class="btn btn--pill magnetic" data-cursor="oi!" data-i18n-cursor="c_hi"><span class="btn__in"><span data-text="Vamos conversar" data-i18n="cta_talk">Vamos conversar</span></span></a>
 </header>
 
 <main id="top">
@@ -50,17 +51,17 @@
   <section class="hero" data-section>
     <div class="hero__trail" aria-hidden="true"></div>
     <div class="hero__top mono">
-      <span>( Portfólio )</span>
+      <span data-i18n="portfolio">( Portfólio )</span>
       <span data-years></span>
-      <span class="hero__avail"><i></i> Disponível para projetos</span>
+      <span class="hero__avail"><i></i> <span data-i18n="available">Disponível para projetos</span></span>
     </div>
     <h1 class="hero__title" aria-label="">
       <span class="hero__line" data-pressure data-first></span>
       <span class="hero__line hero__line--2"><em class="serif">&amp;</em><span data-pressure data-last></span></span>
     </h1>
     <div class="hero__bottom">
-      <p class="hero__role"><span data-role></span><br><span class="muted">Social media, branding, varejo, imobiliário, web &amp; eventos.</span></p>
-      <a href="#trabalhos" class="hero__scroll mono magnetic" data-cursor="↓"><span>Role</span><i></i></a>
+      <p class="hero__role"><span data-role></span><br><span class="muted" data-i18n="hero_sub">Social media, branding, varejo, imobiliário, web &amp; eventos.</span></p>
+      <a href="#trabalhos" class="hero__scroll mono magnetic" data-cursor="↓"><span data-i18n="scroll">Role</span><i></i></a>
     </div>
   </section>
 
@@ -72,10 +73,10 @@
 
   <!-- SOBRE / INTRO -->
   <section class="intro" id="sobre" data-section>
-    <div class="intro__label mono">( 01 ) — Sobre
-      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">DESIGNER ✦ DIRETOR DE ARTE ✦ SOCIAL ✦ BRANDING ✦ VAREJO ✦ </textPath></text><circle cx="100" cy="100" r="7" fill="#ff5a1f"/></svg>
+    <div class="intro__label mono"><span data-i18n="about_label">( 01 ) — Sobre</span>
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ" data-i18n="badge">DESIGNER ✦ DIRETOR DE ARTE ✦ SOCIAL ✦ BRANDING ✦ VAREJO ✦ </textPath></text><circle cx="100" cy="100" r="7" fill="#ff5a1f"/></svg>
     </div>
-    <p class="intro__text" data-words>
+    <p class="intro__text" data-words data-i18n="about_text">
       Eu desenho marcas que precisam vender amanhã de manhã. Encartes de farmácia, lançamentos imobiliários, campanhas de data comemorativa, sites e torneios de card game — tudo com o mesmo cuidado de tipografia, ritmo e cor. Design que aparece no feed, na rua e no balcão.
     </p>
   </section>
@@ -83,8 +84,8 @@
   <!-- DESTAQUES: cards empilhados -->
   <section class="featured" id="destaques" data-section>
     <div class="section-head">
-      <div class="mono">( 02 ) — Destaques</div>
-      <h2 class="h2" data-split>Projetos <em class="serif">em destaque</em></h2>
+      <div class="mono" data-i18n="featured_label">( 02 ) — Destaques</div>
+      <h2 class="h2" data-split data-i18n-html="featured_h">Projetos <em class="serif">em destaque</em></h2>
     </div>
     <div class="stack" data-stack></div>
   </section>
@@ -92,8 +93,8 @@
   <!-- ÍNDICE -->
   <section class="work" id="trabalhos" data-section>
     <div class="section-head">
-      <div class="mono">( 03 ) — Todos os trabalhos</div>
-      <h2 class="h2" data-split>Índice <em class="serif">completo</em></h2>
+      <div class="mono" data-i18n="work_label">( 03 ) — Todos os trabalhos</div>
+      <h2 class="h2" data-split data-i18n-html="work_h">Índice <em class="serif">completo</em></h2>
     </div>
     <div class="filters" role="tablist" aria-label="Filtrar por categoria" data-filters></div>
     <div class="list" data-list></div>
@@ -103,43 +104,43 @@
   <!-- ARQUIVO: galeria infinita arrastável -->
   <section class="archive" id="arquivo" data-section>
     <div class="archive__head">
-      <div class="mono">( 04 ) — Arquivo</div>
-      <h2 class="h2" data-split>Todas as <em class="serif">peças</em></h2>
-      <p class="archive__hint mono">Arraste para explorar ✦ clique para ampliar</p>
+      <div class="mono" data-i18n="archive_label">( 04 ) — Arquivo</div>
+      <h2 class="h2" data-split data-i18n-html="archive_h">Todas as <em class="serif">peças</em></h2>
+      <p class="archive__hint mono" data-i18n="archive_hint">Arraste para explorar ✦ clique para ampliar</p>
     </div>
-    <div class="archive__viewport" data-archive data-cursor="arraste"><div class="archive__canvas"></div></div>
+    <div class="archive__viewport" data-archive data-cursor="arraste" data-i18n-cursor="c_drag"><div class="archive__canvas"></div></div>
   </section>
 
   <!-- SERVIÇOS -->
   <section class="services" data-section>
     <div class="section-head">
-      <div class="mono">( 05 ) — O que eu faço</div>
-      <h2 class="h2" data-split>Disciplinas</h2>
+      <div class="mono" data-i18n="services_label">( 05 ) — O que eu faço</div>
+      <h2 class="h2" data-split data-i18n-html="services_h">Disciplinas</h2>
     </div>
     <div class="services__list" data-services></div>
   </section>
 
   <!-- CLIENTES -->
   <section class="clients" aria-label="Clientes">
-    <div class="mono clients__label">Marcas &amp; projetos</div>
+    <div class="mono clients__label" data-i18n="clients_label">Marcas &amp; projetos</div>
     <div class="clients__row" data-velocity="0.6" data-clients></div>
   </section>
 
   <!-- CONTATO -->
   <section class="contact" id="contato" data-section>
     <div class="contact__blob" aria-hidden="true"></div>
-    <div class="mono">( 06 ) — Contato</div>
-    <h2 class="contact__title" data-split>Vamos tirar<br>a sua ideia <em class="serif">do papel?</em></h2>
+    <div class="mono" data-i18n="contact_label">( 06 ) — Contato</div>
+    <h2 class="contact__title" data-split data-i18n-html="contact_h">Vamos tirar<br>a sua ideia <em class="serif">do papel?</em></h2>
     <div class="contact__actions">
-      <button class="btn btn--big magnetic" data-copy-email data-cursor="copiar"><span class="btn__in"><span data-email></span></span></button>
+      <button class="btn btn--big magnetic" data-copy-email data-cursor="copiar" data-i18n-cursor="c_copy"><span class="btn__in"><span data-email></span></span></button>
       <div class="contact__socials" data-socials></div>
     </div>
   </section>
 
   <footer class="footer mono">
     <span>© <span data-year></span> <span data-name></span></span>
-    <span>Feito à mão com GSAP + Lenis</span>
-    <a href="#top" class="roll"><span data-text="Voltar ao topo ↑">Voltar ao topo ↑</span></a>
+    <span data-i18n="made">Feito à mão com GSAP + Lenis</span>
+    <a href="#top" class="roll"><span data-text="Voltar ao topo ↑" data-i18n="back_top">Voltar ao topo ↑</span></a>
   </footer>
 </main>
 
@@ -147,7 +148,7 @@
 <div class="case" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projeto">
   <div class="case__bg"></div>
   <div class="case__scroll">
-    <button class="case__close magnetic" data-cursor="fechar" aria-label="Fechar projeto"><span></span><span></span></button>
+    <button class="case__close magnetic" data-cursor="fechar" data-i18n-cursor="c_close" aria-label="Fechar projeto"><span></span><span></span></button>
     <div class="case__content"></div>
   </div>
 </div>
@@ -167,6 +168,8 @@
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/i18n-projects.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
