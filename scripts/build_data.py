@@ -83,6 +83,10 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
 
 def rank(p):
     return (ORDER.index(p["slug"]) if p["slug"] in ORDER else 100, p["title"])
+# só mostra peças que já têm imagem exportada (projetos sem nenhuma ficam ocultos)
+pending = {k: sum(1 for i in p["items"] if "th" not in i) for k, p in projects.items()}
+for p in projects.values(): p["items"] = [i for i in p["items"] if "th" in i]
+print("pendentes:", {k: v for k, v in pending.items() if v})
 out = sorted([p for p in projects.values() if p["items"]], key=rank)
 for p in out:
     p["featured"] = p["slug"] in FEATURED
