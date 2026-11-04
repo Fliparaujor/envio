@@ -1,0 +1,35 @@
+{
+  "slug": "proto-bwv",
+  "fileKey": "bwVZjU9oh6Uq2hOZoXWFu4",
+  "title": "Linda Colchões — Landing Page",
+  "client": "Linda Colchões",
+  "category": "Web & Landing Page",
+  "tags": ["landing page", "colchões", "varejo", "Fortaleza", "captação de leads", "design system", "responsivo", "auditoria de acessibilidade"],
+  "summary_pt": "Landing page de captação para a Linda Colchões, de Fortaleza, com a chamada \"Descubra o colchão certo pra sua coluna — com entrega no mesmo dia\" e formulário de diagnóstico via WhatsApp. O arquivo traz a versão auditada e corrigida em desktop, tablet e mobile, a versão original preservada, protótipo navegável, biblioteca de componentes com estados de formulário, ícones próprios de cidades da região metropolitana e handoff para Framer/Elementor. Paleta navy com âmbar sobre creme, tipografia Fraunces + Inter.",
+  "palette": ["#112140", "#1B2E52", "#E7A24B", "#F7F4EE", "#976531"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "AUDITORIA CORRIGIDA — V1", "topLevelFrames": 4},
+    {"pageId": "124:2899", "pageName": "HANDOFF", "topLevelFrames": 1},
+    {"pageId": "52:367", "pageName": "🔒 ORIGINAL — V0 (NÃO EDITAR)", "topLevelFrames": 3},
+    {"pageId": "108:658", "pageName": "PROTÓTIPO — DEMONSTRAÇÃO", "topLevelFrames": 10},
+    {"pageId": "155:627", "pageName": "📦 EXPORT — Assets (Ctrl+A → Export)", "topLevelFrames": 284}
+  ],
+  "selected": [
+    {"nodeId": "2:2", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Desktop / 1440", "w": 1440, "h": 7455, "format": "landing", "hero": true},
+    {"nodeId": "4:2", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Hero", "w": 1440, "h": 732, "format": "landing", "hero": true},
+    {"nodeId": "13:688", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Mobile / 390", "w": 390, "h": 12581, "format": "landing", "hero": true},
+    {"nodeId": "13:327", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Tablet / 768", "w": 768, "h": 10684, "format": "landing", "hero": false},
+    {"nodeId": "4:51", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Dor", "w": 1440, "h": 657, "format": "landing", "hero": false},
+    {"nodeId": "9:362", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Perfis de Sono", "w": 1440, "h": 726, "format": "landing", "hero": false},
+    {"nodeId": "4:71", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Como Funciona", "w": 1440, "h": 912, "format": "landing", "hero": false},
+    {"nodeId": "4:88", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Prova Social", "w": 1440, "h": 559, "format": "landing", "hero": false},
+    {"nodeId": "11:327", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "Lojas", "w": 1440, "h": 600, "format": "landing", "hero": false},
+    {"nodeId": "4:145", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "CTA Final", "w": 1440, "h": 546, "format": "landing", "hero": false},
+    {"nodeId": "64:377", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "DESIGN SYSTEM — Componentes & Estados", "w": 2520, "h": 3855, "format": "other", "hero": false},
+    {"nodeId": "99:1360", "pageName": "AUDITORIA CORRIGIDA — V1", "name": "7 · FORM STATES", "w": 1180, "h": 1929, "format": "other", "hero": false},
+    {"nodeId": "119:1120", "pageName": "PROTÓTIPO — DEMONSTRAÇÃO", "name": "Desktop — Navegador 1440 × 900", "w": 1440, "h": 900, "format": "landing", "hero": false},
+    {"nodeId": "119:1122", "pageName": "PROTÓTIPO — DEMONSTRAÇÃO", "name": "Mobile — Celular 390 × 844", "w": 390, "h": 844, "format": "landing", "hero": false},
+    {"nodeId": "126:1331", "pageName": "PROTÓTIPO — DEMONSTRAÇÃO", "name": "Carrossel / Hero (10 slides)", "w": 1096, "h": 400, "format": "other", "hero": false},
+    {"nodeId": "52:368", "pageName": "🔒 ORIGINAL — V0 (NÃO EDITAR)", "name": "ORIGINAL — Desktop / 1440", "w": 1440, "h": 7976, "format": "landing", "hero": false}
+  ]
+}

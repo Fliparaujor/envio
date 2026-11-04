@@ -25,6 +25,8 @@ OVERRIDE = {
     "untitled-ks7": {"title": "Barros Martins"},
     "untitled-qqw": {"title": "Gbex"},
     "zip-imoveis": {"title": "ZIP Imóveis"},
+    "proto-jhh": {"title": "Coronel Lucas"},
+    "proto-bwv": {"title": "Linda Colchões"},
 }
 
 def fid(n): return n.replace(":", "-")
