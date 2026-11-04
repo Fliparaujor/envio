@@ -4,13 +4,12 @@ import json, glob, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.path.join(ROOT, "assets", "work")
 # ordem e destaque (editável)
-ORDER = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "revival-night", "bispet", "proto-jhh", "proto-bwv", "seven", "zip-imoveis", "odara", "cr-summit", "kroma", "dra-alexandra", "feminite", "jardelly", "gbex", "untitled-qqw", "untitled-ks7", "forno"]
+ORDER = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "revival-night", "bispet", "proto-jhh", "proto-bwv", "seven", "zip-imoveis", "untitled-sie", "odara", "cr-summit", "kroma", "dra-alexandra", "feminite", "jardelly", "gbex", "untitled-qqw", "untitled-ks7", "forno"]
 _OLD = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "bispet", "revival-night", "proto-jhh", "proto-bwv", "cr-summit", "zip-imoveis", "kroma", "odara", "dra-alexandra", "feminite", "jardelly", "sede", "forno"]
 FEATURED = {"monteplan", "economia-farma", "mormaco-tcg", "rise", "revival-night", "bispet"}
 
 # nome curto de exibição + agrupamento de arquivos do mesmo cliente
 OVERRIDE = {
-    "cr-agosto": {"title": "Produção Agosto"},
     "cr-summit": {"title": "Summit Investimentos"},
     "dra-alexandra": {"title": "Dra. Aleksandra"},
     "feminite": {"title": "Feminité"},
@@ -27,6 +26,10 @@ OVERRIDE = {
     "zip-imoveis": {"title": "ZIP Imóveis"},
     "proto-jhh": {"title": "Coronel Lucas"},
     "proto-bwv": {"title": "Linda Colchões"},
+    "cr-hub": {"title": "Hub do Servidor"},
+    "untitled-sie": {"title": "WIND"},
+    "kroma": {"title": "Kroma Tintas"},
+    "cr-agosto": {"title": "Multimarcas — Agosto"},
 }
 
 def fid(n): return n.replace(":", "-")
