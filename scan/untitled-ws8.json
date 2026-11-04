@@ -1,0 +1,23 @@
+{
+  "slug": "untitled-ws8",
+  "fileKey": "WS8PI5x3H6lAjDWYqqGEQV",
+  "title": "Seven Church — 83 Anos",
+  "client": "Seven Church",
+  "category": "Branding",
+  "tags": ["igreja", "aniversário", "identidade comemorativa", "selo 83 anos", "social media", "telão"],
+  "summary_pt": "Identidade comemorativa dos 83 anos da Seven Church, com selo tipográfico em gradiente laranja e grafismos de pixels quadrados. O sistema se desdobra em versões do logo em fundos escuro, rosa e azul, posts 1080x1440 com fotografia em P&B e headlines como \"Só quero a Ti e nada mais\" e \"Uma igreja que vive por um legado\", além de arte para telão.",
+  "palette": ["#1A1414", "#FF5A36", "#F2EEE6", "#F2A08A", "#2B2B2B"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 10}
+  ],
+  "selected": [
+    {"nodeId": "3:2", "pageName": "Page 1", "name": "02_Logo_83_anos_-_Laranja_1920x1080 1", "w": 1920, "h": 1080, "format": "brand", "hero": true},
+    {"nodeId": "3:109", "pageName": "Page 1", "name": "05_Post_-_So_quero_a_Ti_1080x1440 1", "w": 1080, "h": 1440, "format": "post", "hero": true},
+    {"nodeId": "3:179", "pageName": "Page 1", "name": "06_Post_-_Uma_igreja_que_vive_por_um_legado_1080x1440 1", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "3:40", "pageName": "Page 1", "name": "07_Logo_83_anos_-_Vertical_1080x1440 1", "w": 1080, "h": 1440, "format": "brand", "hero": false},
+    {"nodeId": "3:145", "pageName": "Page 1", "name": "03_Logo_83_anos_-_Rosa_1920x1080 1", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "3:75", "pageName": "Page 1", "name": "04_Logo_83_anos_-_Laranja_fundo_azul_1920x1080 1", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:101", "pageName": "Page 1", "name": "83 Anos Sede Telão", "w": 1536, "h": 768, "format": "signage", "hero": false},
+    {"nodeId": "1:2", "pageName": "Page 1", "name": "83 Anos Sede", "w": 1080, "h": 1440, "format": "post", "hero": false}
+  ]
+}

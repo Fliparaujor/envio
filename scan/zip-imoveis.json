@@ -1,0 +1,26 @@
+{
+  "slug": "zip-imoveis",
+  "fileKey": "lcLBw8OYzLV2jiTa1hCsrk",
+  "title": "ZIP Imóveis — Lançamento Terra Brasilis Maracanaú",
+  "client": "ZIP Imóveis / Terra Brasilis (loteamento Vivenza, Maracanaú-CE)",
+  "category": "Imobiliário",
+  "tags": ["imobiliário", "lançamento", "loteamento", "captação de leads", "feed", "stories"],
+  "summary_pt": "Campanha de pré-lançamento da ZIP Imóveis para um novo empreendimento Terra Brasilis em Maracanaú, na região metropolitana de Fortaleza. São cinco posts de feed e cinco stories com fotos aéreas do terreno, gradiente verde-escuro, títulos brancos em destaque e um botão dourado de cadastro. A página VIVENZA tem uma série de textos ainda em rascunho, com camadas sobrepostas, e por isso ficou fora da seleção.",
+  "palette": ["#0F3B33", "#1E5A4C", "#C9A96E", "#FFFFFF", "#6E8F5A"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 10},
+    {"pageId": "68:61", "pageName": "VIVENZA", "topLevelFrames": 22}
+  ],
+  "selected": [
+    {"nodeId": "2:2", "pageName": "Page 1", "name": "feed 1", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "3:3", "pageName": "Page 1", "name": "feed 2", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "3:4", "pageName": "Page 1", "name": "feed 3", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "3:6", "pageName": "Page 1", "name": "feed 4", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "3:7", "pageName": "Page 1", "name": "feed 5", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "3:8", "pageName": "Page 1", "name": "story 1", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "3:9", "pageName": "Page 1", "name": "story 2", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "3:10", "pageName": "Page 1", "name": "story 3", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "3:11", "pageName": "Page 1", "name": "story 4", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "3:12", "pageName": "Page 1", "name": "story 5", "w": 1080, "h": 1920, "format": "story", "hero": false}
+  ]
+}

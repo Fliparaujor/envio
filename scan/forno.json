@@ -1,0 +1,40 @@
+{
+  "slug": "forno",
+  "fileKey": "4DuVrp1fTlCmb3039Aejsy",
+  "title": "Forno Lab — Conteúdo Próprio",
+  "client": "Forno Lab",
+  "category": "Social Media",
+  "tags": ["instagram", "carrossel", "marca própria", "conteúdo educativo", "marketing", "recrutamento"],
+  "summary_pt": "Conteúdo de Instagram da própria agência Forno Lab, com carrosséis e posts editoriais sobre marketing e branding (\"Pessoas não compram produtos\", \"Por que toda empresa está virando uma empresa de mídia\", cases como McDonald's, Cimed e L'Oréal). A linguagem combina fotografia de impacto em tons escuros, tipografia condensada em caixa alta e faixas de destaque em laranja, além de stories de vagas com estética de janelas de interface e smileys.",
+  "palette": ["#FE5200", "#0D0D0D", "#FFFFFF", "#F2EFEA", "#1E4F8A"],
+  "pages": [
+    {"pageId": "160:77", "pageName": "CAPA", "topLevelFrames": 1},
+    {"pageId": "221:2", "pageName": "vacancy", "topLevelFrames": 3},
+    {"pageId": "0:1", "pageName": "dez a fev", "topLevelFrames": 14},
+    {"pageId": "162:80", "pageName": "março", "topLevelFrames": 7},
+    {"pageId": "588:5", "pageName": "JULHO", "topLevelFrames": 57}
+  ],
+  "selected": [
+    {"nodeId": "714:3", "pageName": "JULHO", "name": "01 — CAPA | Pessoas não compram produtos", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "843:561", "pageName": "JULHO", "name": "07 empresa de midia/1", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "222:246", "pageName": "vacancy", "name": "VAGA DSG", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "828:39", "pageName": "JULHO", "name": "01 parecem brasileiras", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "762:3", "pageName": "JULHO", "name": "8licoes - 01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "807:3", "pageName": "JULHO", "name": "conhecida-vs-melhor - 01 — We Pink vs Granado", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "608:91", "pageName": "JULHO", "name": "logoxbranding - 01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "772:2", "pageName": "JULHO", "name": "POST — 12 Regras de Marketing | Forno (3:4)", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "846:583", "pageName": "JULHO", "name": "08 efeito mounjaro/1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "847:601", "pageName": "JULHO", "name": "09 vender para quem nao te conhece/1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "549:5", "pageName": "março", "name": "FORNO 1 — McDonald's", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "563:5", "pageName": "março", "name": "CARROSSEL — TIRAR O MARKETING DO FORNO", "w": 6480, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "505:6", "pageName": "março", "name": "Pilares Mídias Sociais 2026", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "661:5", "pageName": "março", "name": "PARE 1 — capa", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "527:5", "pageName": "março", "name": "Post 1 — Online ou Loja Física", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "106:203", "pageName": "dez a fev", "name": "Instagram post - 2", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "32:151", "pageName": "dez a fev", "name": "Group 57", "w": 6480, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "119:91", "pageName": "dez a fev", "name": "Instagram post - 1", "w": 9720, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "142:55", "pageName": "dez a fev", "name": "Group 87", "w": 7560, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "74:12", "pageName": "dez a fev", "name": "Frame 80", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "160:78", "pageName": "CAPA", "name": "TV - 1", "w": 1280, "h": 720, "format": "brand", "hero": false}
+  ]
+}
