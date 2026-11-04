@@ -15,6 +15,9 @@ Site estático, sem build, pronto para GitHub Pages. Animações com GSAP + Scro
 | `scan/*.json` | manifesto de cada arquivo Figma: páginas varridas e frames escolhidos |
 | `scripts/build_data.py` | junta `scan/*.json` → `assets/js/data.js` |
 | `scripts/grab.py` | baixa um PNG exportado do Figma e gera webp + miniatura |
+| `assets/js/i18n.js` | textos da interface em 9 idiomas (PT, EN, ES, FR, DE, IT, RU, JA, ZH) |
+| `assets/js/i18n-projects.js` | resumos e tags dos projetos traduzidos |
+| `scan/EXPORT_TODO.tsv` | lista dos frames a exportar do Figma |
 | `envio.html` | a antiga página de envio de arquivos (preservada) |
 
 ## Efeitos
@@ -40,3 +43,15 @@ python3 -m http.server 8080
 ## Publicar no GitHub Pages
 
 Settings → Pages → Deploy from a branch → escolha a branch e a pasta `/ (root)`.
+
+## Idiomas
+
+O site abre no idioma do navegador (ou português, se não houver tradução). Dá para forçar com `?lang=en`, `?lang=es` etc., e o seletor no menu lembra a escolha.
+
+## Atualizar as artes
+
+1. Ajuste `scan/<arquivo>.json` (frames escolhidos).
+2. Exporte com o conector do Figma e `scripts/grab.py <slug> <nodeId> <url>` (ver `scripts/EXPORT_AGENT.md`).
+3. Rode `python3 scripts/build_data.py`. Só peças com imagem aparecem no site.
+
+Pendentes: **Kroma Tintas** e **Revival Nights** estão em times do Figma no plano Starter, que bloqueia a exportação. Duplique os arquivos no time Pro e exporte de novo.
