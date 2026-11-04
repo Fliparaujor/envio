@@ -283,6 +283,7 @@
         <div class="scard__tags">${(p.tags || []).slice(0, 4).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>
         <span class="scard__cta">${T("view_project")} <span aria-hidden="true">→</span></span>
       </div>
+      <span class="scard__shade" aria-hidden="true"></span>
       <div class="scard__media"><div class="reel" style="--dur:${Math.max(28, reel(p).length * 6)}s"><div class="reel__track">${[0, 1].map((k) => reel(p).map((it) => `<figure class="post" style="aspect-ratio:${it.w}/${it.h}"${k ? ' aria-hidden="true"' : ""}><img src="${it.src || it.th}" alt="${k ? "" : esc(p.title + " — " + it.name)}" width="${it.w}" height="${it.h}" loading="lazy" decoding="async"></figure>`).join("")).join("")}</div></div></div>
     </article>`;
   }).join("");
@@ -290,7 +291,8 @@
     const cards = $$(".scard", stack);
     cards.forEach((card, i) => {
       const next = cards[i + 1]; if (!next || reduce) return;
-      gsap.to(card, { scale: 0.88, filter: "brightness(.45)", rotateX: 4, ease: "none", scrollTrigger: { trigger: next, start: "top 75%", end: "top 12%", scrub: true } });
+      gsap.to(card, { scale: 0.92, ease: "none", scrollTrigger: { trigger: next, start: "top 80%", end: "top 12%", scrub: true } });
+      gsap.to($(".scard__shade", card), { opacity: 0.6, ease: "none", scrollTrigger: { trigger: next, start: "top 30%", end: "top 12%", scrub: true } });
     });
   };
 
