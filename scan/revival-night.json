@@ -1,0 +1,33 @@
+{
+  "slug": "revival-night",
+  "fileKey": "iQ70uo5rgKvGiD4E4kJtWl",
+  "title": "The Send Brasil 2026 — Revival Nights",
+  "client": "The Send Brasil",
+  "category": "Eventos & Games",
+  "tags": ["evento", "telão de LED", "igreja", "turnê", "motion", "livestream", "identidade de evento"],
+  "summary_pt": "Telas de LED para as Revival Nights da turnê The Send Brasil 2026, adaptadas para cada igreja e cidade (Belém, Recife, Goiânia, Curitiba e Belo Horizonte) em formatos ultrawide, 4K e verticais. O sistema inclui tela de descanso, títulos de mensagem, ofertas, avisos de direito de imagem, redes sociais, app e merch, além de templates de GC para livestream. A identidade usa amarelo intenso, vermelho e azul-marinho, tipografia condensada e o ícone de seta circular.",
+  "palette": ["#FFB800", "#E8202A", "#2B3990", "#1C1C1C", "#F4EFE6"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Matriz de Telas", "topLevelFrames": 23},
+    {"pageId": "408:69", "pageName": "Telas Editáveis", "topLevelFrames": 37},
+    {"pageId": "291:67", "pageName": "Assets", "topLevelFrames": 2}
+  ],
+  "selected": [
+    {"nodeId": "312:216", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Belém - 3840x2160 - Tela de Descanso", "w": 3840, "h": 2160, "format": "signage", "hero": true},
+    {"nodeId": "312:4565", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Belém - 3840x2160 - Palavra 1", "w": 3840, "h": 2160, "format": "signage", "hero": true},
+    {"nodeId": "223:9", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Belém - Direito de Imagem", "w": 5825, "h": 2195, "format": "signage", "hero": false},
+    {"nodeId": "223:211", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Belém - the send merch V2", "w": 5856, "h": 2196, "format": "signage", "hero": false},
+    {"nodeId": "289:14213", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Goiânia - Redes Sociais", "w": 5120, "h": 1280, "format": "signage", "hero": false},
+    {"nodeId": "533:5341", "pageName": "Matriz de Telas", "name": "RVL NIGHT - Curitiba - 1080x1920 - the send merch V2", "w": 1080, "h": 1920, "format": "signage", "hero": false},
+    {"nodeId": "1149:601", "pageName": "Matriz de Telas", "name": "DIGA SIM AO ENGAJAMENTO #1", "w": 1920, "h": 1080, "format": "signage", "hero": false},
+    {"nodeId": "1136:1916", "pageName": "Matriz de Telas", "name": "Coleção The Send 2", "w": 1920, "h": 1080, "format": "signage", "hero": false},
+    {"nodeId": "679:399", "pageName": "Telas Editáveis", "name": "GC Template #1", "w": 1920, "h": 1080, "format": "other", "hero": false},
+    {"nodeId": "752:397", "pageName": "Telas Editáveis", "name": "GO WIL HART", "w": 1920, "h": 1080, "format": "other", "hero": false},
+    {"nodeId": "710:704", "pageName": "Telas Editáveis", "name": "BELÉM - NOITE 02 EDDIE", "w": 1920, "h": 1080, "format": "other", "hero": false},
+    {"nodeId": "1198:329", "pageName": "Telas Editáveis", "name": "DESCANSO #PÓS", "w": 4164, "h": 1680, "format": "signage", "hero": false},
+    {"nodeId": "1230:567", "pageName": "Telas Editáveis", "name": "GENEROSIDADE belém", "w": 5652, "h": 2560, "format": "signage", "hero": false},
+    {"nodeId": "1230:492", "pageName": "Telas Editáveis", "name": "GENEROSIDADE BH", "w": 4164, "h": 1680, "format": "signage", "hero": false},
+    {"nodeId": "1242:509", "pageName": "Telas Editáveis", "name": "outcome - ofertas", "w": 2436, "h": 1370, "format": "signage", "hero": false},
+    {"nodeId": "1256:3", "pageName": "Assets", "name": "Frame 1", "w": 6577, "h": 5265, "format": "brand", "hero": false}
+  ]
+}

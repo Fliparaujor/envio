@@ -1,0 +1,43 @@
+{
+  "slug": "mormaco-tcg",
+  "fileKey": "ANCdtkkPKJ2huwYxdPEtf3",
+  "title": "Mormaço TCG",
+  "client": "Mormaço TCG Store",
+  "category": "Eventos & Games",
+  "tags": ["pokémon tcg", "loja online", "instagram", "carrossel", "design system", "landing page", "torneio", "apresentação"],
+  "summary_pt": "Sistema visual e conteúdo para a Mormaço, loja online de cartas Pokémon TCG: design system com cores, tipografia, logos, ícones e componentes de post, além de carrosséis de Instagram (trinca fixada, \"Uma página só de Rayquaza\", lançamentos e dicas de coleção). O arquivo também traz a exploração da landing page em desktop e mobile e as apresentações dos campeonatos online Challenge Mormaço e Noite Assombrada (Halloween).",
+  "palette": ["#272D67", "#F6D13A", "#FFF1D2", "#7CC8EC", "#2F5DB8"],
+  "pages": [
+    {"pageId": "5:2", "pageName": "00 - THUMBNAIL DO FIGMA", "topLevelFrames": 8},
+    {"pageId": "0:1", "pageName": "01 - DESIGN SYSTEM", "topLevelFrames": 1},
+    {"pageId": "5:3", "pageName": "02 - POSTS DO INSTAGRAM", "topLevelFrames": 10},
+    {"pageId": "5:4", "pageName": "03 - LANDING PAGE", "topLevelFrames": 1},
+    {"pageId": "130:2649", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "topLevelFrames": 74},
+    {"pageId": "174:419", "pageName": "05 - APRESENTAÇÃO CHALLENGE (export PDF)", "topLevelFrames": 10},
+    {"pageId": "288:421", "pageName": "05 - TORNEIO HALLOWEEN (Noite Assombrada)", "topLevelFrames": 12}
+  ],
+  "selected": [
+    {"nodeId": "40:2176", "pageName": "02 - POSTS DO INSTAGRAM", "name": "Trinca A — 01 ESQUERDA — Apresentação", "w": 1080, "h": 1440, "format": "post", "hero": true},
+    {"nodeId": "218:4206", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "13_pagina-de-rayquaza/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "184:1532", "pageName": "05 - APRESENTAÇÃO CHALLENGE (export PDF)", "name": "Slide 01 · Capa", "w": 1920, "h": 1080, "format": "presentation", "hero": true},
+    {"nodeId": "40:2183", "pageName": "02 - POSTS DO INSTAGRAM", "name": "Trinca A — 02 CENTRO — Escolha", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "40:2192", "pageName": "02 - POSTS DO INSTAGRAM", "name": "Trinca A — 03 DIREITA — Comunidade", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "64:1242", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "04_pokemon-favorito/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "64:1252", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "05_primeira-pagina/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "64:1260", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "06_pagina-de-descanso/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "202:2112", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "07_reinado-delta-confirmado/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "202:2422", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "08_abrir-ou-encontrar/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "202:2716", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "08_abrir-ou-encontrar/L04", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "116:2305", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "01_fixado1_assunto-favorito/L02", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "299:4572", "pageName": "04 - EXPORTAR FEED (Ctrl+A → Export)", "name": "14_mega-lucario-z/L01", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "184:2233", "pageName": "05 - APRESENTAÇÃO CHALLENGE (export PDF)", "name": "Slide 05 · A conta", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "185:1588", "pageName": "05 - APRESENTAÇÃO CHALLENGE (export PDF)", "name": "Slide 10 · Resumo", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "288:422", "pageName": "05 - TORNEIO HALLOWEEN (Noite Assombrada)", "name": "01 · Capa", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "289:421", "pageName": "05 - TORNEIO HALLOWEEN (Noite Assombrada)", "name": "08 · Caminho do jogador", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "44:545", "pageName": "03 - LANDING PAGE", "name": "LP / Desktop / Abertura e orientação", "w": 1440, "h": 1585, "format": "landing", "hero": false},
+    {"nodeId": "45:438", "pageName": "03 - LANDING PAGE", "name": "LP / Mobile / Abertura e orientação", "w": 390, "h": 1362, "format": "landing", "hero": false},
+    {"nodeId": "11:2780", "pageName": "00 - THUMBNAIL DO FIGMA", "name": "Thumbnail — MORMAÇO TCG", "w": 1920, "h": 960, "format": "brand", "hero": false},
+    {"nodeId": "6:3", "pageName": "00 - THUMBNAIL DO FIGMA", "name": "Cores", "w": 1474, "h": 853, "format": "brand", "hero": false},
+    {"nodeId": "1:2", "pageName": "01 - DESIGN SYSTEM", "name": "logos e fonte 1", "w": 1311, "h": 2159, "format": "brand", "hero": false}
+  ]
+}

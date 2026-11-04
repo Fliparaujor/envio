@@ -1,0 +1,27 @@
+{
+  "slug": "feminite",
+  "fileKey": "ZCEvLe9T1nJTHSWdFdfQoz",
+  "title": "Feminité — Social Media",
+  "client": "Feminité",
+  "category": "Social Media",
+  "tags": ["saúde da mulher", "fisioterapia pélvica", "gestação", "carrossel", "feed instagram", "stories", "mês das mães"],
+  "summary_pt": "Cronograma de posts para o Instagram da Feminité, espaço de saúde feminina com foco em fisioterapia pélvica, pilates e cuidado na gestação. Inclui posts de feed 1080x1350 com fotografia em tons quentes e tipografia em caixa alta, carrosséis educativos (planejamento da gestação, benefícios da fisioterapia pélvica, método De Gasquet), \"Bebês do Mês\" em feed e stories e um carrossel para o Mês das Mães.",
+  "palette": ["#5A4034", "#C9A58C", "#E8DDD3", "#F7F2EC", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 18}
+  ],
+  "selected": [
+    {"nodeId": "7:28", "pageName": "Page 1", "name": "Autocuidado Feminino", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "43:44", "pageName": "Page 1", "name": "Planejamento Gestação", "w": 6480, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "108:3", "pageName": "Page 1", "name": "Slide 01 · Capa", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "26:2", "pageName": "Page 1", "name": "8 de Março", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "26:28", "pageName": "Page 1", "name": "Fisioterapia Pélvica", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "26:38", "pageName": "Page 1", "name": "Gestação sem dor", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "42:28", "pageName": "Page 1", "name": "Pilates na Gestação", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "57:106", "pageName": "Page 1", "name": "Benefícios Fisioterapia", "w": 4320, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "81:45", "pageName": "Page 1", "name": "Gasquet", "w": 3240, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "33:2", "pageName": "Page 1", "name": "Bebês do Mês", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "88:2", "pageName": "Page 1", "name": "Bebês do Mês ST", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "108:49", "pageName": "Page 1", "name": "Slide 05 · CTA", "w": 1080, "h": 1440, "format": "carousel", "hero": false}
+  ]
+}

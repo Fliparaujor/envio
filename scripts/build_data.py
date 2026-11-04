@@ -4,8 +4,28 @@ import json, glob, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.path.join(ROOT, "assets", "work")
 # ordem e destaque (editável)
-ORDER = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "bispet", "revival-night", "proto-jhh", "proto-bwv", "cr-summit", "zip-imoveis", "kroma", "odara", "dra-alexandra", "feminite", "jardelly", "sede", "forno"]
+ORDER = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "revival-night", "bispet", "proto-jhh", "proto-bwv", "seven", "zip-imoveis", "odara", "cr-summit", "kroma", "dra-alexandra", "feminite", "jardelly", "gbex", "untitled-qqw", "untitled-ks7", "forno"]
+_OLD = ["monteplan", "economia-farma", "mormaco-tcg", "rise", "bispet", "revival-night", "proto-jhh", "proto-bwv", "cr-summit", "zip-imoveis", "kroma", "odara", "dra-alexandra", "feminite", "jardelly", "sede", "forno"]
 FEATURED = {"monteplan", "economia-farma", "mormaco-tcg", "rise", "revival-night", "bispet"}
+
+# nome curto de exibição + agrupamento de arquivos do mesmo cliente
+OVERRIDE = {
+    "cr-agosto": {"title": "Produção Agosto"},
+    "cr-summit": {"title": "Summit Investimentos"},
+    "dra-alexandra": {"title": "Dra. Aleksandra"},
+    "feminite": {"title": "Feminité"},
+    "forno": {"title": "Forno Lab"},
+    "jardelly": {"title": "Jardelly Advocacia"},
+    "odara": {"title": "7 Odara"},
+    "revival-night": {"title": "Revival Nights"},
+    "rise": {"title": "Rise"},
+    "sede": {"title": "Seven Church", "group": "seven"},
+    "untitled-ws8": {"title": "Seven Church", "group": "seven"},
+    "untitled-91m": {"title": "UPAR"},
+    "untitled-ks7": {"title": "Barros Martins"},
+    "untitled-qqw": {"title": "Gbex"},
+    "zip-imoveis": {"title": "ZIP Imóveis"},
+}
 
 def fid(n): return n.replace(":", "-")
 
@@ -16,10 +36,13 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
     m = json.load(open(path, encoding="utf-8"))
     files.add(m["fileKey"])
     total_pages += len(m.get("pages", []))
-    key = m.get("group") or m["slug"]
+    ov = OVERRIDE.get(m["slug"], {})
+    key = ov.get("group") or m.get("group") or m["slug"]
+    m["subtitle"] = m["title"]
+    if ov.get("title"): m["title"] = ov["title"]
     p = projects.get(key)
     if not p:
-        p = projects[key] = {k: m.get(k) for k in ("title", "client", "category", "tags", "summary_pt", "palette")}
+        p = projects[key] = {k: m.get(k) for k in ("title", "subtitle", "client", "category", "tags", "summary_pt", "palette")}
         p.update(slug=key, pages=[], items=[], summary=m.get("summary_pt", ""), fileKeys=[])
         p.pop("summary_pt", None)
     else:  # mescla partes (ex.: economia-farma-a/b)
@@ -31,7 +54,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
     p["pages"] += [pg["pageName"] for pg in m.get("pages", [])]
     for s in m.get("selected", []):
         base = fid(s["nodeId"])
-        full = os.path.join(WORK, key, base + ".webp"); th = os.path.join(WORK, key, base + "_th.webp")
+        full = os.path.join(WORK, m["slug"], base + ".webp"); th = os.path.join(WORK, m["slug"], base + "_th.webp")
         it = {"id": s["nodeId"], "name": s.get("name", ""), "page": s.get("pageName", ""), "w": round(s.get("w") or 1080), "h": round(s.get("h") or 1350), "format": s.get("format", ""), "hero": bool(s.get("hero"))}
         if os.path.exists(full):
             it["src"] = os.path.relpath(full, ROOT).replace(os.sep, "/")

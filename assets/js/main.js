@@ -472,7 +472,7 @@
     const hero = cover(p);
     const rest = p.items.filter((x) => x !== hero);
     caseContent.innerHTML = `
-      <div class="case__eyebrow mono"><span>${String(idx + 1).padStart(2, "0")} / ${projects.length}</span><span>${esc(p.category)}</span><span>${esc(p.client || "")}</span></div>
+      <div class="case__eyebrow mono"><span>${String(idx + 1).padStart(2, "0")} / ${projects.length}</span><span>${esc(p.category)}</span><span>${esc(p.subtitle && p.subtitle !== p.title ? p.subtitle : p.client || "")}</span></div>
       <h2 class="case__title">${esc(p.title)}</h2>
       <div class="case__grid">
         <p class="case__sum">${esc(p.summary)}</p>
