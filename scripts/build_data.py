@@ -32,9 +32,13 @@ OVERRIDE = {
     "cr-agosto": {"title": "Multimarcas — Agosto"},
 }
 
+# frames revisados manualmente que não são peças finais
+EXCLUDE = {("forno", "74:12"), ("monteplan", "200:635")}
+
 def fid(n): return n.replace(":", "-")
 
 projects = {}
+blanks = []
 total_pages = 0
 files = set()
 for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
@@ -73,10 +77,20 @@ for path in sorted(glob.glob(os.path.join(ROOT, "scan", "*.json"))):
                 from PIL import Image
                 with Image.open(th) as im: it["tw"], it["thh"] = im.size
             except Exception: pass
+        if (m["slug"], s["nodeId"]) in EXCLUDE: continue
+        if "th" in it:
+            from PIL import Image, ImageStat
+            with Image.open(th) as im:
+                if max(ImageStat.Stat(im.convert("L")).stddev) < 4:  # imagem lisa = frame vazio
+                    blanks.append(f'{m["slug"]} {s["nodeId"]}'); continue
         p["items"].append(it)
 
 def rank(p):
     return (ORDER.index(p["slug"]) if p["slug"] in ORDER else 100, p["title"])
+# só mostra peças que já têm imagem exportada (projetos sem nenhuma ficam ocultos)
+pending = {k: sum(1 for i in p["items"] if "th" not in i) for k, p in projects.items()}
+for p in projects.values(): p["items"] = [i for i in p["items"] if "th" in i]
+print("pendentes:", {k: v for k, v in pending.items() if v})
 out = sorted([p for p in projects.values() if p["items"]], key=rank)
 for p in out:
     p["featured"] = p["slug"] in FEATURED
@@ -85,4 +99,5 @@ for p in out:
 data = {"projects": out, "stats": {"files": len(files), "pages": total_pages, "pieces": sum(len(p["items"]) for p in out), "categories": len({p["category"] for p in out})}}
 js = "/* gerado por scripts/build_data.py — não edite à mão */\nwindow.PORTFOLIO = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
 open(os.path.join(ROOT, "assets", "js", "data.js"), "w", encoding="utf-8").write(js)
+print("descartadas (vazias):", blanks)
 print(f"{len(out)} projetos, {data['stats']['pieces']} peças, {total_pages} páginas, {len(files)} arquivos; com imagem: {sum(1 for p in out for i in p['items'] if 'th' in i)}")

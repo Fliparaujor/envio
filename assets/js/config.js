@@ -6,8 +6,8 @@ window.SITE = {
   role: "Designer & Diretor de Arte",
   city: "Brasil",
   timezone: "America/Sao_Paulo",
-  email: "seuemail@exemplo.com",        // TROQUE pelo seu e-mail
-  instagram: "https://instagram.com/",  // TROQUE pelo seu perfil
+  email: "felipearaujofoto@gmail.com",
+  instagram: "https://www.instagram.com/felipearaujo.co",
   whatsapp: "",                         // ex.: "https://wa.me/5531999999999"
   behance: "",
   since: 2025

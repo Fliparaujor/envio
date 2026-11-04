@@ -26,7 +26,10 @@
   const pal = (p) => (p.palette && p.palette.length ? p.palette : ["#2a2a26", "#121210", "#ff5a1f"]);
 
   /* ---------- dados ---------- */
+  const I = window.I18N || { t: (k) => k, cat: (c) => c, proj: () => null, cjk: false };
+  const T = I.t;
   const projects = D.projects || [];
+  projects.forEach((p) => { const tr = I.proj(p.slug); if (tr) { if (tr.summary) p.summary = tr.summary; if (tr.tags && tr.tags.length) p.tags = tr.tags; if (tr.subtitle) p.subtitle = tr.subtitle; } });
   const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
   const allItems = [];
   projects.forEach((p) => p.items.forEach((it, i) => allItems.push({ ...it, p, i })));
@@ -49,20 +52,10 @@
   $$("[data-city]").forEach((e) => (e.textContent = S.city));
   $$("[data-initials]").forEach((e) => (e.textContent = (S.first || "F")[0] + (S.last || "A")[0] + "©"));
   $$("[data-year]").forEach((e) => (e.textContent = new Date().getFullYear()));
-  $$("[data-years]").forEach((e) => (e.textContent = `${S.since || ""} — Hoje`));
+  $$("[data-years]").forEach((e) => (e.textContent = `${S.since || ""} — ${T("today")}`));
   $$("[data-email]").forEach((e) => { e.textContent = S.email; e.dataset.text = S.email; });
   $(".hero__title").setAttribute("aria-label", `${S.first} ${S.last}`);
   document.title = `${S.name} — ${S.role}`;
-
-  const st = D.stats || {};
-  const statsList = [
-    [st.files || projects.length, "arquivos Figma"],
-    [st.pages || 0, "páginas varridas"],
-    [st.pieces || allItems.length, "peças no arquivo"],
-    [st.categories || new Set(projects.map((p) => p.category)).size, "disciplinas"],
-  ];
-  $("[data-stats]").innerHTML = statsList.map(([n, l]) => `<div class="stat"><b data-count="${n}">0</b><span>${l}</span></div>`).join("");
-  $("[data-hero-stats]").innerHTML = statsList.slice(0, 3).map(([n, l]) => `<div><b>${n}</b>${l}</div>`).join("");
 
   /* ---------- relógio ---------- */
   const clock = $("[data-clock]");
@@ -204,7 +197,7 @@
   bindMagnetic();
 
   /* ---------- marquee com velocidade de scroll ---------- */
-  const words = ["Social Media", "Branding", "Varejo", "Encartes", "Imobiliário", "Web & Landing", "Eventos", "Direção de Arte"];
+  const words = T("marquee");
   const fillRow = (row, arr, tag = "i", sym = "✺") => {
     const html = arr.map((w) => `<span>${esc(w)}<${tag}>${sym}</${tag}></span>`).join("");
     row.innerHTML = `<div class="mq" style="display:flex">${html}${html}${html}</div>`;
@@ -250,8 +243,8 @@
     });
     // intro: palavra por palavra
     const intro = $("[data-words]");
-    const iw = intro.textContent.trim().split(/\s+/);
-    intro.innerHTML = iw.map((w) => `<span class="w">${esc(w)}</span>`).join(" ");
+    const iw = I.cjk ? [...intro.textContent.trim()] : intro.textContent.trim().split(/\s+/);
+    intro.innerHTML = iw.map((w) => `<span class="w">${esc(w)}</span>`).join(I.cjk ? "" : " ");
     if (!reduce) gsap.to($$(".w", intro), { opacity: 1, stagger: 0.1, ease: "none", scrollTrigger: { trigger: intro, start: "top 80%", end: "bottom 45%", scrub: true } });
     // contadores
     $$("[data-count]").forEach((el) => {
@@ -273,13 +266,13 @@
     const c = pal(p); const bg = c[0]; const tx = ink(bg);
     const imgs = p.items.filter((x) => x.hero).concat(p.items.filter((x) => !x.hero)).slice(0, 3);
     const tfs = p.title.length > 14 ? "3.8vw" : p.title.length > 9 ? "4.6vw" : "5.6vw";
-    return `<article class="scard" style="--c1:${bg};--ink:${tx};--tfs:${tfs}" data-open="${p.slug}" data-cursor="abrir">
+    return `<article class="scard" style="--c1:${bg};--ink:${tx};--tfs:${tfs}" data-open="${p.slug}" data-cursor="${T("c_open")}">
       <div class="scard__info">
-        <div><div class="scard__num"><span>${String(i + 1).padStart(2, "0")} / ${String(featured.length).padStart(2, "0")}</span><span>${esc(p.category)}</span></div></div>
+        <div><div class="scard__num"><span>${String(i + 1).padStart(2, "0")} / ${String(featured.length).padStart(2, "0")}</span><span>${esc(I.cat(p.category))}</span></div></div>
         <div><h3 class="scard__title">${esc(p.title)}</h3></div>
         <p class="scard__sum">${esc(p.summary)}</p>
         <div class="scard__tags">${(p.tags || []).slice(0, 4).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>
-        <span class="scard__cta">Ver projeto <span aria-hidden="true">→</span></span>
+        <span class="scard__cta">${T("view_project")} <span aria-hidden="true">→</span></span>
       </div>
       <div class="scard__media">${imgs.map((it) => `<div class="m">${media({ ...it, p })}</div>`).join("")}</div>
     </article>`;
@@ -297,22 +290,22 @@
   const list = $("[data-list]");
   list.innerHTML = projects.map((p, i) => {
     const c = pal(p);
-    return `<a class="row" href="#/p/${p.slug}" data-cat="${esc(p.category)}" data-slug="${p.slug}" data-cursor="abrir" style="--rc:${c[0]};--rink:${ink(c[0])}">
+    return `<a class="row" href="#/p/${p.slug}" data-cat="${esc(p.category)}" data-slug="${p.slug}" data-cursor="${T("c_open")}" style="--rc:${c[0]};--rink:${ink(c[0])}">
       <span class="row__n">${String(i + 1).padStart(2, "0")}</span>
       <span class="row__t">${esc(p.title)}</span>
-      <span class="row__meta">${esc(p.category)}</span>
-      <span class="row__meta">${p.items.length} peças · ${p.pages.length} pág.</span>
+      <span class="row__meta">${esc(I.cat(p.category))}</span>
+      <span class="row__meta">${p.items.length} ${T("pieces")} · ${p.pages.length} ${T("pages_short")}</span>
       <span class="row__arrow" aria-hidden="true">→</span></a>`;
   }).join("");
   const cats = {};
   projects.forEach((p) => (cats[p.category] = (cats[p.category] || 0) + 1));
   const filters = $("[data-filters]");
-  filters.innerHTML = [["Todos", projects.length], ...Object.entries(cats)].map(([c, n], i) => `<button class="filter ${i ? "" : "is-active"}" role="tab" aria-selected="${!i}" data-f="${esc(c)}">${esc(c)}<sup>${n}</sup></button>`).join("");
+  filters.innerHTML = [["__all", projects.length], ...Object.entries(cats)].map(([c, n], i) => `<button class="filter ${i ? "" : "is-active"}" role="tab" aria-selected="${!i}" data-f="${esc(c)}">${esc(i ? I.cat(c) : T("all"))}<sup>${n}</sup></button>`).join("");
   filters.addEventListener("click", (e) => {
     const b = e.target.closest(".filter"); if (!b) return;
     $$(".filter", filters).forEach((x) => { x.classList.toggle("is-active", x === b); x.setAttribute("aria-selected", x === b); });
     const f = b.dataset.f; const rows = $$(".row", list);
-    const show = rows.filter((r) => f === "Todos" || r.dataset.cat === f);
+    const show = rows.filter((r) => f === "__all" || r.dataset.cat === f);
     rows.forEach((r) => r.classList.toggle("is-out", !show.includes(r)));
     gsap.fromTo(show, { opacity: 0, y: 30 }, { opacity: 1, y: 0, stagger: 0.04, duration: 0.7, ease: "expo.out" });
     ScrollTrigger.refresh();
@@ -348,7 +341,6 @@
     while (added) { added = false; q.forEach((arr) => { if (arr.length) { out.push(arr.shift()); added = true; } }); }
     return out;
   })();
-  $("[data-archive-count]").textContent = `${archItems.length} peças · ${projects.length} projetos`;
   const A = { tiles: [], W: 0, cols: [], ox: 0, oy: 0, vx: 0, vy: 0, drag: false, visible: false, built: false };
   const buildArchive = () => {
     canvas.innerHTML = ""; A.tiles = []; A.cols = [];
@@ -431,9 +423,9 @@
   $("[data-services]").innerHTML = svcCats.map((c, i) => {
     const imgs = allItems.filter((it) => it.p.category === c && it.th).slice(0, 3);
     return `<div class="svc ${i === 0 ? "is-open" : ""}" tabindex="0">
-      <div class="svc__n">${String(i + 1).padStart(2, "0")} · ${cats[c]} projeto${cats[c] > 1 ? "s" : ""}</div>
+      <div class="svc__n">${String(i + 1).padStart(2, "0")} · ${cats[c]} ${cats[c] > 1 ? T("projects") : T("project")}</div>
       <div class="svc__imgs">${imgs.map((it) => `<span>${media(it)}</span>`).join("")}</div>
-      <div><h3 class="svc__t">${esc(c)}</h3><p class="svc__body">${esc(svcText[c] || "")}</p></div>
+      <div><h3 class="svc__t">${esc(I.cat(c))}</h3><p class="svc__body">${esc((T("svc") || {})[c] || svcText[c] || "")}</p></div>
     </div>`;
   }).join("");
   const svcs = $$(".svc");
@@ -446,7 +438,7 @@
   const island = $(".island");
   const toast = (msg) => { $(".island__txt", island).textContent = msg; island.classList.add("is-on"); clearTimeout(toast.t); toast.t = setTimeout(() => island.classList.remove("is-on"), 2200); };
   $("[data-copy-email]").addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(S.email); toast("E-mail copiado ✓"); } catch { location.href = "mailto:" + S.email; }
+    try { await navigator.clipboard.writeText(S.email); toast(T("copied")); } catch { location.href = "mailto:" + S.email; }
   });
 
   /* ---------- LIGHTBOX ---------- */
@@ -472,18 +464,18 @@
     const hero = cover(p);
     const rest = p.items.filter((x) => x !== hero);
     caseContent.innerHTML = `
-      <div class="case__eyebrow mono"><span>${String(idx + 1).padStart(2, "0")} / ${projects.length}</span><span>${esc(p.category)}</span><span>${esc(p.subtitle && p.subtitle !== p.title ? p.subtitle : p.client || "")}</span></div>
+      <div class="case__eyebrow mono"><span>${String(idx + 1).padStart(2, "0")} / ${projects.length}</span><span>${esc(I.cat(p.category))}</span><span>${esc(p.subtitle && p.subtitle !== p.title ? p.subtitle : p.client || "")}</span></div>
       <h2 class="case__title">${esc(p.title)}</h2>
       <div class="case__grid">
         <p class="case__sum">${esc(p.summary)}</p>
-        <div><h4>Entregas</h4><div class="scard__tags">${(p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
-        <div><h4>Paleta</h4><div class="palette">${c.map((h) => `<span style="background:${h}" data-hex="${h}"></span>`).join("")}</div>
-          <h4 style="margin-top:20px">Arquivo</h4><p class="mono">${p.pages.length} páginas · ${p.items.length} peças</p></div>
+        <div><h4>${T("deliverables")}</h4><div class="scard__tags">${(p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
+        <div><h4>${T("palette")}</h4><div class="palette">${c.map((h) => `<span style="background:${h}" data-hex="${h}"></span>`).join("")}</div>
+          <h4 style="margin-top:20px">${T("archive_word")}</h4><p class="mono">${p.pages.length} ${T("pages")} · ${p.items.length} ${T("pieces")}</p></div>
       </div>
       <div class="case__hero reveal-img" data-lb="0">${media({ ...hero, p }, { full: true, lazy: false })}</div>
       <div class="case__pages">${p.pages.map((pg) => `<span class="chip">${esc(pg)}</span>`).join("")}</div>
-      <div class="gallery">${rest.map((it, i) => `<figure class="reveal-img" data-lb="${i + 1}" data-cursor="ampliar" style="--ar:${it.w}/${clamp(it.h, 1, it.w * 2.4)}">${media({ ...it, p }, { full: true })}<figcaption>${esc(it.name)} · ${esc(it.page || "")}</figcaption></figure>`).join("")}</div>
-      <a class="case__next" href="#/p/${next.slug}" data-cursor="próximo"><span class="mono">Próximo projeto →</span><b>${esc(next.title)}</b></a>`;
+      <div class="gallery">${rest.map((it, i) => `<figure class="reveal-img" data-lb="${i + 1}" data-cursor="${T("c_zoom")}" style="--ar:${it.w}/${clamp(it.h, 1, it.w * 2.4)}">${media({ ...it, p }, { full: true })}<figcaption>${esc(it.name)} · ${esc(it.page || "")}</figcaption></figure>`).join("")}</div>
+      <a class="case__next" href="#/p/${next.slug}" data-cursor="${T("c_next")}"><span class="mono">${T("next_project")}</span><b>${esc(next.title)}</b></a>`;
     const lbArr = [hero, ...rest].map((it) => ({ ...it, p }));
     $$("[data-lb]", caseContent).forEach((f) => f.addEventListener("click", () => openLightbox(lbArr, +f.dataset.lb)));
     bindCursor(caseContent); bindMagnetic(caseContent);
