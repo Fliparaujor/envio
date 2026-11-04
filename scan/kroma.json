@@ -1,0 +1,28 @@
+{
+  "slug": "kroma",
+  "fileKey": "WVWDMyHwFJv5h0xnaWKXJI",
+  "title": "Kroma Tintas — Social Media",
+  "client": "Kroma Tintas",
+  "category": "Social Media",
+  "tags": ["social media", "carrossel", "tintas", "construção", "paleta de cores", "data comemorativa"],
+  "summary_pt": "Posts e carrosséis de Instagram para a Kroma Tintas, com sugestões de cores para fachadas (Marfim, Areia, Cromo Suave) e cozinhas (Baunilha, Verde Maldivas, Azul Calmaria, Cinza). O arquivo também traz posts de produto da linha Emborrachada, massa e selador, além de uma peça para o Dia do Pintor. As peças usam fotos de ambientes com blocos em verde-petróleo e a logo branca da marca.",
+  "palette": ["#0E5C63", "#F4ECE2", "#F2B53A", "#1F2A2D", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 1},
+    {"pageId": "1:126", "pageName": "Page 2", "topLevelFrames": 0}
+  ],
+  "selected": [
+    {"nodeId": "23:325", "pageName": "Page 1", "name": "Frame 14 (Fachadas com um toque da Kroma Tintas)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "23:344", "pageName": "Page 1", "name": "Frame 15 (Marfim)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "23:389", "pageName": "Page 1", "name": "Frame 18 (Qual cor combina com sua fachada?)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "19:179", "pageName": "Page 1", "name": "Frame 9 (Inspirações para cozinha)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "22:257", "pageName": "Page 1", "name": "Frame 10 (Verde Maldivas)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "22:269", "pageName": "Page 1", "name": "Frame 11 (Azul Calmaria)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "22:294", "pageName": "Page 1", "name": "Frame 13 (Qual cor combina com sua cozinha?)", "w": 1075.83, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "13:139", "pageName": "Page 1", "name": "Frame 5 (Conheça nosso selador)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "14:161", "pageName": "Page 1", "name": "Frame 8 (Feliz Dia do Pintor)", "w": 1075.83, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "3:3", "pageName": "Page 1", "name": "Frame 2 (Acabamento de qualidade — massa)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "8:57", "pageName": "Page 1", "name": "Frame 3 (Durabilidade — tinta emborrachada)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "11:113", "pageName": "Page 1", "name": "Frame 4 (Cores que refletem emoções)", "w": 1080, "h": 1350, "format": "post", "hero": false}
+  ]
+}

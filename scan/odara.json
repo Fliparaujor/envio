@@ -1,0 +1,26 @@
+{
+  "slug": "odara",
+  "fileKey": "2Xm9nBFwPnKuSs3bkcRcfX",
+  "title": "7 Odara — Identidade e Material Off",
+  "client": "7 Odara Artigos Religiosos (@7_odara)",
+  "category": "Branding",
+  "tags": ["branding", "identidade visual", "fachada", "papelaria", "cartão de visita", "tags", "windbanner", "uniforme"],
+  "summary_pt": "Aplicações de marca aprovadas para a 7 Odara, loja de artigos religiosos de umbanda, candomblé e religiões de matriz africana. O kit offline reúne fachada, adesivos de vidro \"Puxe\" e \"Empurre\", windbanner com QR code, tags de roupa, cartão de visita e camisas. Tudo segue um degradê quente de laranja e vermelho até roxo, com o monograma \"7\" em forma de chama.",
+  "palette": ["#F39A1E", "#E8331C", "#C8102E", "#4B1A6B", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 1}
+  ],
+  "selected": [
+    {"nodeId": "46:1395", "pageName": "Page 1", "name": "Material Off (prancha geral)", "w": 13274, "h": 13556, "format": "brand", "hero": true},
+    {"nodeId": "37:2", "pageName": "Page 1", "name": "Faxada", "w": 9808.75, "h": 1995, "format": "signage", "hero": true},
+    {"nodeId": "37:4", "pageName": "Page 1", "name": "Windbanner", "w": 2606, "h": 6949.33, "format": "signage", "hero": false},
+    {"nodeId": "37:10", "pageName": "Page 1", "name": "vidro (Puxe)", "w": 11652, "h": 971, "format": "signage", "hero": false},
+    {"nodeId": "46:1356", "pageName": "Page 1", "name": "vidro 2 (Empurre)", "w": 11652, "h": 971, "format": "signage", "hero": false},
+    {"nodeId": "42:941", "pageName": "Page 1", "name": "Tag frente", "w": 1693.33, "h": 2540, "format": "print", "hero": false},
+    {"nodeId": "37:5", "pageName": "Page 1", "name": "Tag costas", "w": 1693.33, "h": 2540, "format": "print", "hero": false},
+    {"nodeId": "65:526", "pageName": "Page 1", "name": "Cartão de visita frente", "w": 2810, "h": 1561.11, "format": "print", "hero": true},
+    {"nodeId": "42:1017", "pageName": "Page 1", "name": "Cartão de visita costas", "w": 2810, "h": 1561.11, "format": "print", "hero": false},
+    {"nodeId": "72:45", "pageName": "Page 1", "name": "camisa frente", "w": 1054, "h": 1598, "format": "other", "hero": false},
+    {"nodeId": "72:75", "pageName": "Page 1", "name": "camisa costas", "w": 1054, "h": 1598, "format": "other", "hero": false}
+  ]
+}

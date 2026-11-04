@@ -1,0 +1,26 @@
+{
+  "slug": "rise",
+  "fileKey": "YJq1Yeh9ht8sx8uoJmHXIl",
+  "title": "Rise — Brand Refresh",
+  "client": "Rise",
+  "category": "Branding",
+  "tags": ["brand refresh", "logotipo", "identidade visual", "streetwear", "mockups", "paleta de cores", "tipografia"],
+  "summary_pt": "Apresentação do brand refresh da Rise, marca de estética streetwear/skate, com novo conceito, novo logotipo com estrela e órbita, símbolo RS, paleta liderada pelo verde-limão #CEFF00 com grafite e cinzas, e tipografias Monument Extended e Alte Haas Grotesk. A marca aparece aplicada em mockups de camisetas preta e branca, boné e skate.",
+  "palette": ["#CEFF00", "#383838", "#0A0A0A", "#DDDDDD", "#8E8E8E"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Brand Refresh", "topLevelFrames": 12}
+  ],
+  "selected": [
+    {"nodeId": "1:7", "pageName": "Brand Refresh", "name": "06 Logo verde", "w": 1920, "h": 1080, "format": "brand", "hero": true},
+    {"nodeId": "1:9", "pageName": "Brand Refresh", "name": "08 Mockup camiseta preta", "w": 1920, "h": 1080, "format": "brand", "hero": true},
+    {"nodeId": "1:2", "pageName": "Brand Refresh", "name": "01 Capa", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "1:3", "pageName": "Brand Refresh", "name": "02 Brand refresh", "w": 1920, "h": 1080, "format": "presentation", "hero": false},
+    {"nodeId": "1:5", "pageName": "Brand Refresh", "name": "04 Novo logotipo", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:6", "pageName": "Brand Refresh", "name": "05 Símbolo RS", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:8", "pageName": "Brand Refresh", "name": "07 Color scheme", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:10", "pageName": "Brand Refresh", "name": "09 Mockup skate", "w": 1920, "h": 1080, "format": "brand", "hero": true},
+    {"nodeId": "1:11", "pageName": "Brand Refresh", "name": "10 Mockup boné", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:12", "pageName": "Brand Refresh", "name": "11 Mockup camiseta branca", "w": 1920, "h": 1080, "format": "brand", "hero": false},
+    {"nodeId": "1:13", "pageName": "Brand Refresh", "name": "12 Tipografias", "w": 1920, "h": 1080, "format": "brand", "hero": false}
+  ]
+}

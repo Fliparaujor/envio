@@ -1,0 +1,40 @@
+{
+  "slug": "cr-summit",
+  "fileKey": "egJS5I5m3jj35tuOsWW062",
+  "title": "Summit Investimentos — Social Media (set–abr)",
+  "client": "Summit Investimentos (escritório Necton / BTG Pactual)",
+  "category": "Social Media",
+  "tags": ["social media", "mercado financeiro", "investimentos", "3D", "calendário editorial", "datas comemorativas"],
+  "summary_pt": "Calendário editorial mensal de setembro a abril para a Summit Investimentos, assessoria ligada à Necton/BTG Pactual, com cerca de 12 posts por mês sob a hashtag #vemsersummit. As peças combinam fundo azul-marinho, ilustrações 3D e títulos com destaque em laranja, além de posts sazonais de Natal e Ano Novo.",
+  "palette": ["#0B1F3F", "#E05A00", "#1E6FD9", "#7FD3F0", "#FFFFFF"],
+  "pages": [
+    {"pageId": "152:2", "pageName": "CAPA", "topLevelFrames": 1},
+    {"pageId": "0:1", "pageName": "SETEMBRO", "topLevelFrames": 12},
+    {"pageId": "41:3", "pageName": "OUTUBRO", "topLevelFrames": 10},
+    {"pageId": "58:2", "pageName": "NOVEMBRO", "topLevelFrames": 13},
+    {"pageId": "69:2", "pageName": "DEZEMBRO", "topLevelFrames": 14},
+    {"pageId": "98:2", "pageName": "JANEIRO", "topLevelFrames": 12},
+    {"pageId": "114:2", "pageName": "FEVEREIRO", "topLevelFrames": 12},
+    {"pageId": "141:2", "pageName": "MARÇO", "topLevelFrames": 14},
+    {"pageId": "164:2", "pageName": "ABRIL", "topLevelFrames": 12}
+  ],
+  "selected": [
+    {"nodeId": "152:3", "pageName": "CAPA", "name": "Frame 1 (capa Summit + Necton)", "w": 1440, "h": 1080, "format": "brand", "hero": true},
+    {"nodeId": "1:113", "pageName": "SETEMBRO", "name": "04 (Infraestrutura estratégica)", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "1:162", "pageName": "SETEMBRO", "name": "01", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "1:58", "pageName": "SETEMBRO", "name": "02", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "1:31", "pageName": "SETEMBRO", "name": "06", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "41:91", "pageName": "OUTUBRO", "name": "01", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "41:225", "pageName": "OUTUBRO", "name": "06", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "58:146", "pageName": "NOVEMBRO", "name": "03", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "58:3", "pageName": "NOVEMBRO", "name": "12", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "80:5", "pageName": "DEZEMBRO", "name": "ESTATICO 2 summit (Feliz Natal)", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "80:37", "pageName": "DEZEMBRO", "name": "ESTATICO 13 summit (Feliz 2026)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "98:91", "pageName": "JANEIRO", "name": "01", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "98:150", "pageName": "JANEIRO", "name": "03", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "114:174", "pageName": "FEVEREIRO", "name": "7", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "141:144", "pageName": "MARÇO", "name": "7", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "149:2", "pageName": "MARÇO", "name": "13", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "164:290", "pageName": "ABRIL", "name": "4", "w": 1080, "h": 1350, "format": "post", "hero": false}
+  ]
+}

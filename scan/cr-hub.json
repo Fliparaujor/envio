@@ -1,0 +1,23 @@
+{
+  "slug": "cr-hub",
+  "fileKey": "mernERixSHvs4f4QSS3rQR",
+  "title": "Hub do Servidor — Carrosséis sobre IA no serviço público",
+  "client": "Hub do Servidor (hubdoservidor.com)",
+  "category": "Social Media",
+  "tags": ["social media", "carrossel panorâmico", "tecnologia", "inteligência artificial", "setor público", "jurídico"],
+  "summary_pt": "Série de carrosséis panorâmicos de quatro telas e posts estáticos para o Hub do Servidor, plataforma voltada a servidores públicos. Os temas incluem uso de IA para zerar a pauta, triagem automatizada, anonimização de dados, assinatura digital e o PL 2338 sobre regulação de IA. O visual é tech e escuro, com fotos azuladas, títulos em caixa alta em ciano e branco e o selo \"Arrasta para o lado\".",
+  "palette": ["#06121F", "#0B2A44", "#1FC8E8", "#2C6E9E", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 8}
+  ],
+  "selected": [
+    {"nodeId": "0:25050", "pageName": "Page 1", "name": "carrosel 1 (Zerar a pauta não é correr mais)", "w": 4320, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "0:25079", "pageName": "Page 1", "name": "carrosel 2 (2025 vs 2026: a IA trabalha com você)", "w": 4320, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:25108", "pageName": "Page 1", "name": "carrosel 3 (segurança de dados e anonimização)", "w": 4320, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:25172", "pageName": "Page 1", "name": "carrosel 5 (Trabalho não precisa te prender à mesa)", "w": 4320, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:25242", "pageName": "Page 1", "name": "carrosel 7 (Assinatura digital sem complicação)", "w": 4320, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:25273", "pageName": "Page 1", "name": "ESTATICO (recesso do servidor)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "2:127", "pageName": "Page 1", "name": "ESTATICO (Em 2026, IA será requisito)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "8:3", "pageName": "Page 1", "name": "Instagram post - 1 (PL 2338: o futuro da IA no Brasil)", "w": 1080, "h": 1350, "format": "post", "hero": true}
+  ]
+}

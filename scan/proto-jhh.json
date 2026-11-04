@@ -1,0 +1,38 @@
+{
+  "slug": "proto-jhh",
+  "fileKey": "jHhD5dTLrizJWSPynrCFU3",
+  "title": "Coronel Lucas — Landing Page",
+  "client": "Coronel Lucas (pré-candidato a Deputado Estadual — PB)",
+  "category": "Web & Landing Page",
+  "tags": ["landing page", "campanha política", "design system", "responsivo", "protótipo", "handoff", "acessibilidade"],
+  "summary_pt": "Landing page de captação de apoiadores para o Coronel Lucas, candidato a deputado estadual na Paraíba, desenhada em desktop (1440), tablet (768) e mobile (390) com protótipo navegável. O arquivo traz o sistema completo: foundations com paleta navy, latão e papel, tipografia serifada, componentes com estados (formulário com LGPD, timeline, FAQ), fluxos de erro e sucesso, além de handoff e specs para desenvolvimento.",
+  "palette": ["#0A0F1A", "#141E33", "#C9A04A", "#F3EFE3", "#8B3232"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "00 — LEIA-ME & ÍNDICE", "topLevelFrames": 1},
+    {"pageId": "2:2", "pageName": "01 — BRIEFING & COPY LOCK", "topLevelFrames": 1},
+    {"pageId": "2:3", "pageName": "02 — FOUNDATIONS", "topLevelFrames": 1},
+    {"pageId": "2:4", "pageName": "03 — COMPONENTES & ESTADOS", "topLevelFrames": 19},
+    {"pageId": "2:5", "pageName": "04 — DESKTOP / 1440", "topLevelFrames": 1},
+    {"pageId": "2:6", "pageName": "05 — TABLET / 768", "topLevelFrames": 1},
+    {"pageId": "2:7", "pageName": "06 — MOBILE / 390", "topLevelFrames": 4},
+    {"pageId": "2:8", "pageName": "07 — PROTÓTIPO & FLUXOS", "topLevelFrames": 24},
+    {"pageId": "2:9", "pageName": "08 — HANDOFF & SPECS", "topLevelFrames": 1},
+    {"pageId": "2:10", "pageName": "09 — EXPORT / ASSETS", "topLevelFrames": 317},
+    {"pageId": "2:11", "pageName": "99 — ARQUIVO / ORIGINAL", "topLevelFrames": 11}
+  ],
+  "selected": [
+    {"nodeId": "63:158", "pageName": "04 — DESKTOP / 1440", "name": "LP Coronel Lucas · Desktop / 1440", "w": 1440, "h": 5921, "format": "landing", "hero": true},
+    {"nodeId": "63:2183", "pageName": "07 — PROTÓTIPO & FLUXOS", "name": "Protótipo · Desktop 1440 × 900", "w": 1440, "h": 900, "format": "landing", "hero": true},
+    {"nodeId": "63:461", "pageName": "06 — MOBILE / 390", "name": "LP Coronel Lucas · Mobile / 390", "w": 390, "h": 8417, "format": "landing", "hero": true},
+    {"nodeId": "63:307", "pageName": "05 — TABLET / 768", "name": "LP Coronel Lucas · Tablet / 768", "w": 768, "h": 7421, "format": "landing", "hero": false},
+    {"nodeId": "80:2977", "pageName": "07 — PROTÓTIPO & FLUXOS", "name": "Protótipo · Mobile 390 × 844", "w": 390, "h": 844, "format": "landing", "hero": false},
+    {"nodeId": "63:2462", "pageName": "07 — PROTÓTIPO & FLUXOS", "name": "Protótipo · Tablet 768 × 1024", "w": 768, "h": 1024, "format": "landing", "hero": false},
+    {"nodeId": "29:7", "pageName": "02 — FOUNDATIONS", "name": "Paleta · Primitivos", "w": 1440, "h": 1113, "format": "brand", "hero": false},
+    {"nodeId": "123:3", "pageName": "02 — FOUNDATIONS", "name": "Iconografia · Identidade da IDV", "w": 1440, "h": 1075, "format": "brand", "hero": false},
+    {"nodeId": "64:433", "pageName": "03 — COMPONENTES & ESTADOS", "name": "Formulário de captação", "w": 2022, "h": 2224, "format": "other", "hero": false},
+    {"nodeId": "138:4130", "pageName": "03 — COMPONENTES & ESTADOS", "name": "Timeline / Horizontal", "w": 1260, "h": 665, "format": "other", "hero": false},
+    {"nodeId": "37:47", "pageName": "07 — PROTÓTIPO & FLUXOS", "name": "Estados · O que acontece depois do envio", "w": 1600, "h": 1727, "format": "other", "hero": false},
+    {"nodeId": "40:179", "pageName": "08 — HANDOFF & SPECS", "name": "Breakpoints · Grid, container e margem", "w": 1600, "h": 842, "format": "other", "hero": false},
+    {"nodeId": "113:184", "pageName": "99 — ARQUIVO / ORIGINAL", "name": "ANTES · desktop · 03 · Trajetória / Autoridade", "w": 1440, "h": 746, "format": "landing", "hero": false}
+  ]
+}

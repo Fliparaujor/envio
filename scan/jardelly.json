@@ -1,0 +1,33 @@
+{
+  "slug": "jardelly",
+  "fileKey": "B7EqwbOXQGueF33TL0eLME",
+  "title": "Jardelly — Advocacia de Família",
+  "client": "Jardelly (advogada de família)",
+  "category": "Social Media",
+  "tags": ["social media", "advocacia", "direito de família", "reels", "capas de reels", "carrossel", "personal branding"],
+  "summary_pt": "Conteúdo de Instagram para a advogada de família Jardelly, com posts, carrosséis e capas de reels sobre pensão alimentícia, partilha, divórcio e união estável. A linguagem visual usa fotos editoriais da cliente com tipografia branca em destaque e o monograma da marca, além da série \"Jardelly Responde\" em formato vertical.",
+  "palette": ["#C9A27E", "#1C1A19", "#FFFFFF", "#8A6A52", "#E9DFD2"],
+  "pages": [
+    {"pageId": "268:2", "pageName": "CAPA", "topLevelFrames": 1},
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 89},
+    {"pageId": "293:41", "pageName": "1", "topLevelFrames": 18}
+  ],
+  "selected": [
+    {"nodeId": "355:9", "pageName": "1", "name": "PENSÃO ALIMENTÍCIA", "w": 1080, "h": 1440, "format": "post", "hero": true},
+    {"nodeId": "359:28", "pageName": "1", "name": "QUESTÃO JUDICIAL", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "293:42", "pageName": "1", "name": "capa", "w": 1069, "h": 1901, "format": "story", "hero": false},
+    {"nodeId": "310:12", "pageName": "1", "name": "EP 8", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "0:64", "pageName": "Page 1", "name": "Frame 50 (Bagagem emocional também pesa na partilha)", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "0:57", "pageName": "Page 1", "name": "Frame 47 (Sustentação oral em ação de pensão)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "0:48", "pageName": "Page 1", "name": "Frame 49 (O espelho da sua relação tá limpo?)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "0:10", "pageName": "Page 1", "name": "Frame 51 (Coisas que eu preciso explicar — capa de carrossel)", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:4", "pageName": "Page 1", "name": "Frame 43 (Já mora junto?)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "0:105", "pageName": "Page 1", "name": "Frame 45 (A partilha virou meme)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "128:2", "pageName": "Page 1", "name": "Frame 50 (Divórcio sem dor?)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "26:2", "pageName": "Page 1", "name": "Frame 57 (capa de reels — ostentação)", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "6:33", "pageName": "Page 1", "name": "Frame 56 (capa de reels — combo da audiência)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "0:131", "pageName": "Page 1", "name": "capa jardelly carro (Jardelly responde VIII)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "195:8", "pageName": "Page 1", "name": "Frame 97 (A separação traz dúvidas)", "w": 1069, "h": 1901, "format": "story", "hero": false},
+    {"nodeId": "268:3", "pageName": "CAPA", "name": "Desktop - 1 (capa com monograma)", "w": 1440, "h": 1024, "format": "brand", "hero": false}
+  ]
+}

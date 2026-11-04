@@ -1,0 +1,33 @@
+{
+  "slug": "sede",
+  "fileKey": "sONOe7mnaPumfYnGjBqIz0",
+  "title": "Igreja Seven — Sede",
+  "client": "Igreja Seven (Sede Rodolfo Teófilo)",
+  "category": "Social Media",
+  "tags": ["igreja", "instagram", "stories", "agenda", "cultos", "eventos", "tipografia"],
+  "summary_pt": "Peças de Instagram para a sede de uma igreja no Rodolfo Teófilo, em Fortaleza, identificada pelo símbolo \"7\": convites para cultos de domingo, a quarta \"Seven Power\", Santa Ceia, culto de casais, celebração de mulheres e aniversário do reverendo. Tem carrosséis da agenda de fim de ano em preto e dourado e stories com tipografia expressiva, misturando serifas, script e fotografia em P&B com azul elétrico.",
+  "palette": ["#0B0B0B", "#C8A574", "#1D4BFF", "#F1ECE3", "#5C8BD6"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 4},
+    {"pageId": "26:2", "pageName": "Agendas", "topLevelFrames": 13},
+    {"pageId": "53:2", "pageName": "Domingos", "topLevelFrames": 7}
+  ],
+  "selected": [
+    {"nodeId": "13:2", "pageName": "Page 1", "name": "Domingo ST (Santa Ceia)", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "26:583", "pageName": "Agendas", "name": "Agenda Sede", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "75:154", "pageName": "Domingos", "name": "Power 2", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "1:2", "pageName": "Page 1", "name": "Quarta Power", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "2:44", "pageName": "Page 1", "name": "Domingo ST", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "26:6", "pageName": "Agendas", "name": "Agenda 1", "w": 3584, "h": 768, "format": "banner", "hero": false},
+    {"nodeId": "26:1026", "pageName": "Agendas", "name": "Agenda Sede ST", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "26:1251", "pageName": "Agendas", "name": "Niver Rev", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "32:1533", "pageName": "Agendas", "name": "Culto Casais", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "35:1669", "pageName": "Agendas", "name": "Culto Casais ST", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "35:1706", "pageName": "Agendas", "name": "Celeb Mulheres", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "53:3", "pageName": "Domingos", "name": "Domingo", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "54:64", "pageName": "Domingos", "name": "Domingo ST2", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "66:15", "pageName": "Domingos", "name": "Power 1", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "75:176", "pageName": "Domingos", "name": "Power 3", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "75:199", "pageName": "Domingos", "name": "Power 4", "w": 1080, "h": 1920, "format": "story", "hero": false}
+  ]
+}

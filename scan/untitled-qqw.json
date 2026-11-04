@@ -1,0 +1,27 @@
+{
+  "slug": "untitled-qqw",
+  "fileKey": "qqwHoSs2yVQWlGNnuYhvj4",
+  "title": "Gbex — Conteúdo Instagram & LinkedIn",
+  "client": "Gbex",
+  "category": "Social Media",
+  "tags": ["logística", "transportadora", "nordeste", "carrossel", "linkedin", "instagram", "B2B"],
+  "summary_pt": "Série de carrosséis 1080x1350 para Instagram (IG) e LinkedIn (LI) da Gbex, transportadora com operação em sete estados do Nordeste. As peças combinam fotografia de frota e motoristas com sobreposições em azul, cards translúcidos e infográficos, como o mapa de cobertura regional, e explicam temas como mudanças no CT-e, prazos, redespachos e rastreamento de cargas.",
+  "palette": ["#0B1F4D", "#1E6FD9", "#3FA9F5", "#FFFFFF", "#E9EEF5"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 31}
+  ],
+  "selected": [
+    {"nodeId": "0:45", "pageName": "Page 1", "name": "IG-02 · Mapa dos 7 estados", "w": 1080, "h": 1350, "format": "post", "hero": true},
+    {"nodeId": "0:160", "pageName": "Page 1", "name": "LI-04 · S1 · Capa", "w": 1080, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "0:1373", "pageName": "Page 1", "name": "IG-12 · S5 · 30 anos no interior", "w": 1080, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "0:124", "pageName": "Page 1", "name": "LI-02 · S1 · Dado", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:151", "pageName": "Page 1", "name": "LI-03 · Peça única · Rastreamento ≠ comunicação", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "0:216", "pageName": "Page 1", "name": "LI-04 · S4 · Flexibilização do autorizador", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:244", "pageName": "Page 1", "name": "LI-05 · S1 · Capa", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:568", "pageName": "Page 1", "name": "LI-05 · S5 · Percurso real", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:668", "pageName": "Page 1", "name": "IG-05 · S1 · Capa", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:681", "pageName": "Page 1", "name": "IG-05 · S2 · O que é", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:1003", "pageName": "Page 1", "name": "IG-12 · S1 · Capa", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "0:1384", "pageName": "Page 1", "name": "IG-18 · S1 · Capa", "w": 1080, "h": 1350, "format": "carousel", "hero": false}
+  ]
+}

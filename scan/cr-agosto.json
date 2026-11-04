@@ -1,0 +1,27 @@
+{
+  "slug": "cr-agosto",
+  "fileKey": "BzljX6yHVV36XuQT4v0DYL",
+  "title": "CR — Agosto (produção mensal multi-clientes)",
+  "client": "Carteira CR: Economia Farma, Fiuza (urologia), Dr. Bruno, Dra. Renata, M3 Premoldados, Blocock, Summit, Jardelly, Techway/Lysis",
+  "category": "Social Media",
+  "tags": ["social media", "carrossel", "farmácia", "saúde", "jurídico", "stories", "dia dos pais", "volta às aulas"],
+  "summary_pt": "Arquivo de produção mensal de agosto com posts e carrosséis para nove clientes organizados em seções. Destaques para a Economia Farma (campanhas de volta às aulas e Dia dos Pais em vermelho e amarelo), os carrosséis educativos de urologia da Fiuza em azul e a série da Techway para o software jurídico Lysis, com ilustrações 3D.",
+  "palette": ["#C8102E", "#FFD100", "#0A3A8C", "#1F5BD8", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 13}
+  ],
+  "selected": [
+    {"nodeId": "234:12", "pageName": "Page 1", "name": "Economia Farma — volta as aulas 1", "w": 1080, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "413:90", "pageName": "Page 1", "name": "Economia Farma — Group 145 (carrossel panorâmico)", "w": 4320, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "385:274", "pageName": "Page 1", "name": "Economia Farma — 07/08 (Pai que se cuida inspira)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "378:88", "pageName": "Page 1", "name": "Economia Farma — Prancheta 2 (live Dia dos Pais)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "220:113", "pageName": "Page 1", "name": "Fiuza — Carrossel 4-1 (Cálculo ureteral)", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "9:127", "pageName": "Page 1", "name": "Fiuza — Carrossel 2-1 (câncer de próstata)", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "188:672", "pageName": "Page 1", "name": "Techway — 43 (Foque na estratégia)", "w": 1081.5, "h": 1351.5, "format": "post", "hero": true},
+    {"nodeId": "188:533", "pageName": "Page 1", "name": "Techway — 38 (Advogado moderno)", "w": 1081.5, "h": 1351.5, "format": "post", "hero": false},
+    {"nodeId": "307:10231", "pageName": "Page 1", "name": "Summit — 49", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "196:13", "pageName": "Page 1", "name": "Jardelly — capa jardelly carro", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "120:39", "pageName": "Page 1", "name": "Blocock — Carrossel 1-1", "w": 1080, "h": 1350, "format": "carousel", "hero": false},
+    {"nodeId": "58:24", "pageName": "Page 1", "name": "M3 premoldados — Frame 23", "w": 1080, "h": 1350, "format": "post", "hero": false}
+  ]
+}

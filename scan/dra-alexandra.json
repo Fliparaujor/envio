@@ -1,0 +1,37 @@
+{
+  "slug": "dra-alexandra",
+  "fileKey": "HCWFBhyfMhOzujhoBejTOt",
+  "title": "Dra. Aleksandra — Gastroenterologia Pediátrica",
+  "client": "Dra. Aleksandra (médica, saúde digestiva infantil)",
+  "category": "Social Media",
+  "tags": ["social media", "saúde", "pediatria", "carrossel", "capas de reels", "conteúdo educativo"],
+  "summary_pt": "Conteúdo mensal de Instagram (março e abril) para a Dra. Aleksandra, com carrosséis educativos, posts estáticos e capas de reels sobre saúde digestiva infantil, como intestino preso, seletividade alimentar, baixo ganho de peso e gastroenterite. A identidade usa degradês lilás e rosado sobre fotos de crianças e da médica, com títulos em serifa clara.",
+  "palette": ["#8B6FC0", "#C9B6E4", "#E9B9C8", "#3FB8AE", "#FFFFFF"],
+  "pages": [
+    {"pageId": "6:2", "pageName": "CAPA", "topLevelFrames": 1},
+    {"pageId": "0:1", "pageName": "CAPA REELS", "topLevelFrames": 2},
+    {"pageId": "7:6", "pageName": "MARÇO", "topLevelFrames": 32},
+    {"pageId": "63:182", "pageName": "ABRIL", "topLevelFrames": 38}
+  ],
+  "selected": [
+    {"nodeId": "60:2", "pageName": "CAPA REELS", "name": "Instagram story - 2 (Gastroenterite em crianças)", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "1:2", "pageName": "CAPA REELS", "name": "Instagram story - 1 (Vocês perguntam, a Dra. responde!)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "13:2", "pageName": "MARÇO", "name": "CARROSSEL 1 - 1 (Evacuar a cada 3 dias)", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "17:56", "pageName": "MARÇO", "name": "CARROSSEL 1 - 2", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "38:231", "pageName": "MARÇO", "name": "CARROSSEL 2 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "38:245", "pageName": "MARÇO", "name": "CARROSSEL 3 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "43:338", "pageName": "MARÇO", "name": "CARROSSEL 4 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "49:175", "pageName": "MARÇO", "name": "CARROSSEL 5 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "54:185", "pageName": "MARÇO", "name": "CARROSSEL 6 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "20:2", "pageName": "MARÇO", "name": "ESTATICO 1", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "20:23", "pageName": "MARÇO", "name": "ESTATICO 2", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "37:216", "pageName": "MARÇO", "name": "ESTATICO 3", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "41:311", "pageName": "MARÇO", "name": "ESTÁTICO 4", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "63:708", "pageName": "ABRIL", "name": "CARROSSEL 1 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "63:1115", "pageName": "ABRIL", "name": "CARROSSEL 2 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "63:723", "pageName": "ABRIL", "name": "CARROSSEL 3 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "63:183", "pageName": "ABRIL", "name": "ESTATICO 1", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "63:697", "pageName": "ABRIL", "name": "ESTATICO 2", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "66:2262", "pageName": "ABRIL", "name": "CARROSSEL 4 - 5", "w": 1080, "h": 1440, "format": "carousel", "hero": false}
+  ]
+}

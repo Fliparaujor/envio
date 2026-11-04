@@ -1,0 +1,24 @@
+{
+  "slug": "untitled-sie",
+  "fileKey": "SIeA89hj4zmqldTNur8W1K",
+  "title": "WIND — Empreendimento Powered by Porsche Consulting",
+  "client": "WIND (empreendimento residencial de alto padrão no Meireles, Fortaleza); o arquivo também tem um post avulso da Seven Church",
+  "category": "Imobiliário",
+  "tags": ["imobiliário", "alto padrão", "lançamento", "feed", "stories", "carrossel panorâmico", "Porsche Consulting"],
+  "summary_pt": "Peças de lançamento para o WIND, apresentado como o primeiro empreendimento Powered by Porsche Consulting no Ceará, entre o mar e o Meireles. São posts de feed, stories verticais e um carrossel panorâmico com renders de fachada, piscina e interiores, além de citações à arquitetura de Daniel Arruda e aos interiores de Carlos Rossi. O visual é sóbrio, com cinza grafite, céu noturno e detalhes em bronze. A página 1 tem ainda um post de Santa Ceia para a Seven Church.",
+  "palette": ["#1E1F22", "#1A2A48", "#B98A5A", "#D6D3CE", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 1},
+    {"pageId": "6:2", "pageName": "f", "topLevelFrames": 3}
+  ],
+  "selected": [
+    {"nodeId": "21:2", "pageName": "f", "name": "Frame 1 (carrossel panorâmico WIND)", "w": 3240, "h": 1350, "format": "carousel", "hero": true},
+    {"nodeId": "6:3", "pageName": "f", "name": "Instagram post - 1 (fachada)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "6:4", "pageName": "f", "name": "Instagram post - 2 (sala, apto tipo A1)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "6:5", "pageName": "f", "name": "Instagram post - 3 (piscina)", "w": 1080, "h": 1350, "format": "post", "hero": false},
+    {"nodeId": "6:7", "pageName": "f", "name": "Instagram post - 5 (fachada noturna)", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "6:8", "pageName": "f", "name": "Instagram post - 6 (sala duplex)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "6:9", "pageName": "f", "name": "Instagram post - 7 (piscina V2)", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "0:3", "pageName": "Page 1", "name": "Santa ceia (Seven Church)", "w": 1080, "h": 1350, "format": "post", "hero": false}
+  ]
+}

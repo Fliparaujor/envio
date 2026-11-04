@@ -1,0 +1,20 @@
+{
+  "slug": "untitled-91m",
+  "fileKey": "91M2yxwBuhJIn88mppp6Cs",
+  "title": "UPAR — Sequência de stories PCs de alta performance",
+  "client": "UPAR (upar.com.br), loja de PCs de alta performance em Fortaleza",
+  "category": "Social Media",
+  "tags": ["stories", "tecnologia", "hardware", "PC gamer", "varejo", "sequência de vendas"],
+  "summary_pt": "Sequência de cinco stories verticais para a UPAR, referência em PCs de alta performance em Fortaleza. A narrativa começa numa capa institucional, passa por cards de produto com especificações (MacBook M1 Pro Max e workstations Intel e AMD) e termina num CTA para falar com um especialista no WhatsApp. Visual escuro com brilhos verde-água e fotos de setups com iluminação RGB.",
+  "palette": ["#05100E", "#0E2A26", "#2FD4A8", "#1B6B5C", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 5}
+  ],
+  "selected": [
+    {"nodeId": "12:2", "pageName": "Page 1", "name": "UPAR | PC | 01 — Capa", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "12:21", "pageName": "Page 1", "name": "UPAR | PC | 02 — MacBook M1 Pro Max", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "12:43", "pageName": "Page 1", "name": "UPAR | PC | 03 — Workstation i5 12400F", "w": 1080, "h": 1920, "format": "story", "hero": false},
+    {"nodeId": "12:65", "pageName": "Page 1", "name": "UPAR | PC | 04 — Workstation AMD Ryzen 7", "w": 1080, "h": 1920, "format": "story", "hero": true},
+    {"nodeId": "12:87", "pageName": "Page 1", "name": "UPAR | PC | 05 — CTA Final", "w": 1080, "h": 1920, "format": "story", "hero": false}
+  ]
+}

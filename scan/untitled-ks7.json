@@ -1,0 +1,27 @@
+{
+  "slug": "untitled-ks7",
+  "fileKey": "Ks7JSpcrmyJ7e5PwykRWu8",
+  "title": "Barros Martins Advocacia — Social Media",
+  "client": "Barros Martins Advocacia & Consultoria (@barros.martins.adv)",
+  "category": "Social Media",
+  "tags": ["social media", "advocacia", "direito trabalhista", "direito à saúde", "carrossel", "conteúdo educativo"],
+  "summary_pt": "Pacote de conteúdo para o Instagram do escritório Barros Martins Advocacia & Consultoria, com seis posts estáticos e seis carrosséis de quatro telas. Os temas incluem assédio moral, direitos trabalhistas de profissionais da saúde, pejotização, negativa de plano de saúde e jurídico estratégico para empresas. O visual combina fotos corporativas, blocos em verde-petróleo e tipografia branca com o selo \"Passa pro lado\".",
+  "palette": ["#0E4A52", "#0A2F35", "#2E7C84", "#E9EEEE", "#FFFFFF"],
+  "pages": [
+    {"pageId": "0:1", "pageName": "Page 1", "topLevelFrames": 30}
+  ],
+  "selected": [
+    {"nodeId": "2:1253", "pageName": "Page 1", "name": "ESTÁTICO 1 (direitos trabalhistas dos profissionais da saúde)", "w": 1080, "h": 1440, "format": "post", "hero": true},
+    {"nodeId": "3:1254", "pageName": "Page 1", "name": "ESTÁTICO 2", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "3:1255", "pageName": "Page 1", "name": "ESTÁTICO 3", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "3:1256", "pageName": "Page 1", "name": "ESTÁTICO 4", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "3:1257", "pageName": "Page 1", "name": "ESTÁTICO 5", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "3:1258", "pageName": "Page 1", "name": "ESTÁTICO 6", "w": 1080, "h": 1440, "format": "post", "hero": false},
+    {"nodeId": "7:3743", "pageName": "Page 1", "name": "CARROSSEL 1 - 1 (assédio moral no trabalho)", "w": 1080, "h": 1440, "format": "carousel", "hero": true},
+    {"nodeId": "7:3797", "pageName": "Page 1", "name": "CARROSSEL 2 -1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "7:3854", "pageName": "Page 1", "name": "CARROSSEL 3 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "7:3906", "pageName": "Page 1", "name": "CARROSSEL 4 - 1 (plano de saúde negou o tratamento?)", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "7:3960", "pageName": "Page 1", "name": "CARROSSEL 5 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false},
+    {"nodeId": "7:4017", "pageName": "Page 1", "name": "CARROSSEL 6 - 1", "w": 1080, "h": 1440, "format": "carousel", "hero": false}
+  ]
+}

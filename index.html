@@ -2,51 +2,175 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Enviar arquivos</title>
-<style>
-  :root { --fundo: #f4f3ef; --texto: #1d1d1b; --suave: #6b6a65; --acento: #1f6f5c; }
-  @media (prefers-color-scheme: dark) { :root { --fundo: #141513; --texto: #ecebe6; --suave: #9c9b95; --acento: #4fb39a; } }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box;
-         background: var(--fundo); color: var(--texto); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 420px; text-align: center; }
-  h1 { font-size: 24px; margin: 0 0 8px; }
-  p { color: var(--suave); margin: 0 0 20px; }
-  button { font: inherit; font-weight: 600; border: 0; border-radius: 10px; padding: 12px 20px;
-           background: var(--acento); color: #fff; cursor: pointer; }
-  [hidden] { display: none; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Felipe Araújo — Designer & Diretor de Arte</title>
+<meta name="description" content="Portfólio de Felipe Araújo: social media, branding, varejo, imobiliário, web e eventos.">
+<meta name="theme-color" content="#0c0c0b">
+<meta property="og:title" content="Felipe Araújo — Portfólio">
+<meta property="og:description" content="Social media, branding, varejo, imobiliário, web e eventos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0c0b'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23ff5a1f'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<main>
-  <h1 id="titulo">Conectando...</h1>
-  <p id="texto">Procurando o computador de destino.</p>
-  <button id="denovo" hidden>Tentar de novo</button>
-</main>
-<script>
-// O link do túnel muda quando o servidor reinicia; o servidor grava o atual em link.txt deste repositório.
-const FONTE = "https://api.github.com/repos/Fliparaujor/envio/contents/link.txt?ref=main";
+<body class="is-loading">
 
-async function ir() {
-  document.getElementById("denovo").hidden = true;
-  document.getElementById("titulo").textContent = "Conectando...";
-  document.getElementById("texto").textContent = "Procurando o computador de destino.";
-  try {
-    const r = await fetch(FONTE + "&t=" + Date.now(), { headers: { Accept: "application/vnd.github.raw" }, cache: "no-store" });
-    const link = (await r.text()).trim();
-    if (!/^https:\/\/[a-z0-9.-]+$/.test(link)) throw new Error("sem link");
-    const vivo = await fetch(link + "/vivo", { cache: "no-store" }).then(x => x.ok).catch(() => false);
-    if (!vivo) throw new Error("desligado");
-    location.replace(link + "/");
-  } catch (e) {
-    document.getElementById("titulo").textContent = "O computador de destino está desligado agora";
-    document.getElementById("texto").textContent = "Tente de novo daqui a pouco. Se continuar assim, avise o Felipe.";
-    document.getElementById("denovo").hidden = false;
-  }
-}
-document.getElementById("denovo").addEventListener("click", ir);
-ir();
-</script>
+<!-- grão animado -->
+<svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<!-- cursor -->
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+<!-- preloader -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__grid">
+    <div class="loader__name"><span data-first></span><em>portfólio</em></div>
+    <div class="loader__count"><span class="loader__num">000</span></div>
+    <div class="loader__bar"><i></i></div>
+    <div class="loader__strip"></div>
+  </div>
+  <div class="loader__curtain"></div>
+</div>
+
+<header class="nav">
+  <a href="#top" class="nav__logo magnetic" data-cursor="topo" aria-label="Início"><span class="nav__mark"></span><span data-initials></span></a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#destaques" class="roll"><span data-text="Destaques">Destaques</span></a>
+    <a href="#trabalhos" class="roll"><span data-text="Trabalhos">Trabalhos</span></a>
+    <a href="#arquivo" class="roll"><span data-text="Arquivo">Arquivo</span></a>
+    <a href="#sobre" class="roll"><span data-text="Sobre">Sobre</span></a>
+  </nav>
+  <div class="nav__clock mono"><span class="pulse"></span><span data-city></span> <span data-clock>--:--</span></div>
+  <a href="#contato" class="btn btn--pill magnetic" data-cursor="oi!"><span class="btn__in"><span data-text="Vamos conversar">Vamos conversar</span></span></a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-section>
+    <div class="hero__trail" aria-hidden="true"></div>
+    <div class="hero__top mono">
+      <span>( Portfólio )</span>
+      <span data-years></span>
+      <span class="hero__avail"><i></i> Disponível para projetos</span>
+    </div>
+    <h1 class="hero__title" aria-label="">
+      <span class="hero__line" data-pressure data-first></span>
+      <span class="hero__line hero__line--2"><em class="serif">&amp;</em><span data-pressure data-last></span></span>
+    </h1>
+    <div class="hero__bottom">
+      <p class="hero__role"><span data-role></span><br><span class="muted">Social media, branding, varejo, imobiliário, web &amp; eventos.</span></p>
+      <div class="hero__stats mono" data-hero-stats></div>
+      <a href="#trabalhos" class="hero__scroll mono magnetic" data-cursor="↓"><span>Role</span><i></i></a>
+    </div>
+    <p class="hero__hint mono" aria-hidden="true">Mexa o cursor ✦</p>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__row" data-velocity="1"></div>
+    <div class="marquee__row marquee__row--outline" data-velocity="-1"></div>
+  </section>
+
+  <!-- SOBRE / INTRO -->
+  <section class="intro" id="sobre" data-section>
+    <div class="intro__label mono">( 01 ) — Sobre
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">DESIGNER ✦ DIRETOR DE ARTE ✦ SOCIAL ✦ BRANDING ✦ VAREJO ✦ </textPath></text><circle cx="100" cy="100" r="7" fill="#ff5a1f"/></svg>
+    </div>
+    <p class="intro__text" data-words>
+      Eu desenho marcas que precisam vender amanhã de manhã. Encartes de farmácia, lançamentos imobiliários, campanhas de data comemorativa, sites e torneios de card game — tudo com o mesmo cuidado de tipografia, ritmo e cor. Design que aparece no feed, na rua e no balcão.
+    </p>
+    <div class="intro__stats" data-stats></div>
+  </section>
+
+  <!-- DESTAQUES: cards empilhados -->
+  <section class="featured" id="destaques" data-section>
+    <div class="section-head">
+      <div class="mono">( 02 ) — Destaques</div>
+      <h2 class="h2" data-split>Projetos <em class="serif">em destaque</em></h2>
+    </div>
+    <div class="stack" data-stack></div>
+  </section>
+
+  <!-- ÍNDICE -->
+  <section class="work" id="trabalhos" data-section>
+    <div class="section-head">
+      <div class="mono">( 03 ) — Todos os trabalhos</div>
+      <h2 class="h2" data-split>Índice <em class="serif">completo</em></h2>
+    </div>
+    <div class="filters" role="tablist" aria-label="Filtrar por categoria" data-filters></div>
+    <div class="list" data-list></div>
+    <div class="list__preview" aria-hidden="true"><div class="list__preview-inner"></div></div>
+  </section>
+
+  <!-- ARQUIVO: galeria infinita arrastável -->
+  <section class="archive" id="arquivo" data-section>
+    <div class="archive__head">
+      <div class="mono">( 04 ) — Arquivo</div>
+      <h2 class="h2" data-split>Todas as <em class="serif">peças</em></h2>
+      <p class="archive__hint mono"><span data-archive-count></span> · arraste para explorar ✦ clique para ampliar</p>
+    </div>
+    <div class="archive__viewport" data-archive data-cursor="arraste"><div class="archive__canvas"></div></div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" data-section>
+    <div class="section-head">
+      <div class="mono">( 05 ) — O que eu faço</div>
+      <h2 class="h2" data-split>Disciplinas</h2>
+    </div>
+    <div class="services__list" data-services></div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section class="clients" aria-label="Clientes">
+    <div class="mono clients__label">Marcas &amp; projetos</div>
+    <div class="clients__row" data-velocity="0.6" data-clients></div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato" data-section>
+    <div class="contact__blob" aria-hidden="true"></div>
+    <div class="mono">( 06 ) — Contato</div>
+    <h2 class="contact__title" data-split>Vamos tirar<br>a sua ideia <em class="serif">do papel?</em></h2>
+    <div class="contact__actions">
+      <button class="btn btn--big magnetic" data-copy-email data-cursor="copiar"><span class="btn__in"><span data-email></span></span></button>
+      <div class="contact__socials" data-socials></div>
+    </div>
+  </section>
+
+  <footer class="footer mono">
+    <span>© <span data-year></span> <span data-name></span></span>
+    <span>Feito à mão com GSAP + Lenis</span>
+    <a href="#top" class="roll"><span data-text="Voltar ao topo ↑">Voltar ao topo ↑</span></a>
+  </footer>
+</main>
+
+<!-- CASE (overlay) -->
+<div class="case" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projeto">
+  <div class="case__bg"></div>
+  <div class="case__scroll">
+    <button class="case__close magnetic" data-cursor="fechar" aria-label="Fechar projeto"><span></span><span></span></button>
+    <div class="case__content"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" aria-hidden="true">
+  <div class="lightbox__media"></div>
+  <div class="lightbox__cap mono"></div>
+  <button class="lightbox__nav lightbox__prev" aria-label="Anterior">←</button>
+  <button class="lightbox__nav lightbox__next" aria-label="Próxima">→</button>
+</div>
+
+<!-- dynamic island toast -->
+<div class="island" role="status" aria-live="polite"><span class="island__dot"></span><span class="island__txt"></span></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
